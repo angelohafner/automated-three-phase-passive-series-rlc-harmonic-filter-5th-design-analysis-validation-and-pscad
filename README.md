@@ -220,44 +220,44 @@ Os valores abaixo sao por fase, para estrela. Qf e a potencia reativa capacitiva
 **liquida trifasica** fornecida pelo ramo na fundamental, na tensao nominal.
 Ela inclui o efeito do reator e da resistencia. Nao e somente a potencia do capacitor.
 
-\[
+$$
 Z_f(\omega)=R+j\left(\omega L-\frac{1}{\omega C}\right),\qquad
 \omega_t=2\pi f_t,\quad LC=\frac{1}{\omega_t^2},\quad
 q=\frac{\omega_tL}{R}=\frac{1}{\omega_tCR}.
-\]
+$$
 
 Definindo X=1/(omega1*C)-omega1*L>0, o ramo fundamental e R-jX:
 
-\[
+$$
 S_f=3\frac{V_{ph}^2}{Z_f^*}=\frac{V_{LL}^2}{R+jX},\quad
 Q_f=-\Im(S_f)=\frac{V_{LL}^2X}{R^2+X^2}.
-\]
+$$
 
 Para especificacao por fator de qualidade, tome a=omega_t/omega1-omega1/omega_t
 e x_t=omega_t*L. Entao X=a*x_t e R=x_t/q, resultando em:
 
-\[
+$$
 x_t=\frac{V_{LL}^2a}{Q_f(a^2+q^{-2})},\quad
 L=\frac{x_t}{\omega_t},\quad C=\frac{1}{\omega_tx_t},\quad R=\frac{x_t}{q}.
-\]
+$$
 
 Se `filter_resistance_ohm` for especificada, ela tem precedencia sobre q. Resolve-se:
 
-\[
+$$
 Q_fX^2-V_{LL}^2X+Q_fR^2=0,\quad
 X=\frac{V_{LL}^2+\sqrt{V_{LL}^4-4Q_f^2R^2}}{2Q_f},\quad
 L=\frac{X}{\omega_t^2/\omega_1-\omega_1},\quad C=\frac{1}{\omega_t^2L}.
-\]
+$$
 
 Seleciona-se a raiz de maior reatancia, que tende a VLL^2/Qf quando R tende a zero.
 Um discriminante negativo significa especificacao inviavel e interrompe o calculo.
 
 Desprezando R apenas para uma estimativa inicial:
 
-\[
+$$
 C\simeq\frac{Q_f[1-(f_1/f_t)^2]}{\omega_1V_{LL}^2},\quad
 L=\frac{1}{\omega_t^2C},\quad R=\frac{\omega_tL}{q}.
-\]
+$$
 
 Com 480 V, 30 kvar, 300 Hz e q=50, o dimensionamento completo fornece:
 
@@ -303,11 +303,11 @@ verificar estabilidade. O ponto final nao e contado duas vezes.
 O ajuste simultaneo por minimos quadrados usa constante, seno e cosseno de cada
 ordem de 1 a 25. Para x(t)=a_h*sin(h*omega1*t)+b_h*cos(h*omega1*t):
 
-\[
+$$
 \underline X_h=(a_h+jb_h)/\sqrt{2},\quad
 X_{rms}=\sqrt{\frac{1}{N}\sum_n x_n^2},\quad
 THD_{2:25}=100\frac{\sqrt{\sum_{h=2}^{25}|\underline X_h|^2}}{|\underline X_1|}.
-\]
+$$
 
 O RMS total inclui DC e tudo que houver no sinal amostrado; a THD e limitada a
 25 ordens. A DC e exportada separadamente. Angulos de componentes despreziveis e
@@ -315,10 +315,10 @@ THD sem fundamental mensuravel sao `NaN`/n.a., e nao zero arbitrario.
 
 A KCL e verificada com residuos de sinal e de fasor:
 
-\[
+$$
 r(t)=i_{load}-i_{system}-i_{filter}-i_{linear},\quad
 \underline r_h=\underline I_{load,h}-\underline I_{system,h}-\underline I_{filter,h}-\underline I_{linear,h}.
-\]
+$$
 
 O CSV informa parte real, imaginaria, erro absoluto e 100*|r_h|/|Iload,h| quando
 a ordem e injetada. Para ordens ausentes, o erro percentual relativo a carga nao
@@ -334,10 +334,10 @@ indesejada deve ficar abaixo de 1% da esperada. As tolerancias sao configuraveis
 
 Percentuais de modulo solicitados:
 
-\[
+$$
 A_h=100|I_{filter,h}|/|I_{load,h}|,\quad
 S_h=100|I_{system,h}|/|I_{load,h}|.
-\]
+$$
 
 Em geral A_h+S_h nao e 100%, porque os fasores possuem angulos diferentes.
 Para uma decomposicao aditiva use as partes reais das razoes complexas:
@@ -347,23 +347,23 @@ percentuais de energia dissipada pelo filtro.
 
 A fonte ideal nao contem tensao harmonica para h>1. Sem carga linear, vale:
 
-\[
+$$
 Z_{g,h}=R_g+jh\omega_1L_g,\quad
 \frac{I_{filter,h}}{I_{load,h}}=\frac{Z_{g,h}}{Z_{g,h}+Z_{f,h}},\quad
 \frac{I_{system,h}}{I_{load,h}}=\frac{Z_{f,h}}{Z_{g,h}+Z_{f,h}}.
-\]
+$$
 
 Na fundamental, E1 tambem fornece corrente ao capacitor. A solucao geral usada
 na referencia independente inclui esse termo e a carga linear:
 
-\[
+$$
 Z_{PCC,h}=\left(Z_{g,h}^{-1}+Z_{f,h}^{-1}+Y_{linear}\right)^{-1},\quad
 V_{PCC,h}=Z_{PCC,h}\left(I_{load,h}+E_h/Z_{g,h}\right),
-\]
-\[
+$$
+$$
 I_{system,h}=(V_{PCC,h}-E_h)/Z_{g,h},\quad
 I_{filter,h}=V_{PCC,h}/Z_{f,h},\quad I_{linear,h}=Y_{linear}V_{PCC,h}.
-\]
+$$
 
 Retira-se Zf^-1 no caso sem filtro. A impedancia vista do PCC e calculada com
 a fonte de tensao anulada (curto) e as fontes de corrente anuladas (abertas).
