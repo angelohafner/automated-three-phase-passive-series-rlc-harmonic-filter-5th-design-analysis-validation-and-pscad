@@ -1,0 +1,32 @@
+{
+  "without_filter": {
+    "resistance_ohm": 0.031999444454089344,
+    "inductance_h": 0.0008488116268438093,
+    "capacitance_f": 0.00033157855458030466
+  },
+  "tuned_5th": {
+    "resistance_ohm": 0.031999444454089344,
+    "inductance_h": 0.0008488116268438093,
+    "capacitance_f": 0.00033157855458030466
+  },
+  "detuned_285hz": {
+    "resistance_ohm": 0.033683625741146674,
+    "inductance_h": 0.0009405114978878771,
+    "capacitance_f": 0.00033157855458030466
+  },
+  "stiff_grid": {
+    "resistance_ohm": 0.031999444454089344,
+    "inductance_h": 0.0008488116268438093,
+    "capacitance_f": 0.00033157855458030466
+  },
+  "weak_grid": {
+    "resistance_ohm": 0.031999444454089344,
+    "inductance_h": 0.0008488116268438093,
+    "capacitance_f": 0.00033157855458030466
+  },
+  "low_quality": {
+    "resistance_ohm": 0.07999861113522336,
+    "inductance_h": 0.0008488116268438093,
+    "capacitance_f": 0.00033157855458030466
+  }
+}

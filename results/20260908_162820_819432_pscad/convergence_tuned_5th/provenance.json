@@ -1,0 +1,13 @@
+{
+  "origin": "PSCAD_EMTDC",
+  "created": "2026-09-08T16:36:22.179434",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "matplotlib": "3.11.1"
+  },
+  "selected_cases": [
+    "tuned_5th"
+  ],
+  "template": "C:\\Users\\z005b93y\\PycharmProjects\\harmonics-1\\results\\20260908_162820_819432_pscad\\projects\\HarmonicBase.pscx"
+}

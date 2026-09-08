@@ -1,0 +1,9 @@
+{
+  "case": "tuned_5th",
+  "coarse_step_us": 10.0,
+  "fine_step_us": 5.0,
+  "fine_sample_step_us": 5.0,
+  "max_complex_difference_pct": 0.22013203969150033,
+  "limit_pct": 1.0,
+  "passed": true
+}

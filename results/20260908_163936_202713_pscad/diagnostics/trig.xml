@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Definition classid="UserCmpDefn" name="trig" url="" view="false" instances="0" date="0" crc="134012158" id="42595001" group="CSMF,External C"><paramlist><param name="Description" value="Trigonometric Functions" /></paramlist><form name="Trigonometric Functions" w="280" h="420" splitter="70" commentlines="4"><category name="Configuration" visible="true"><parameter name="Name" desc="Name for Identification" type="Text" group="" helpmode="Overwrite" allowemptystr="true"><value /><cond type="Enable">true</cond><help>Enter a name for identification</help><regex /><error_msg /></parameter><parameter type="Choice" name="Type" desc="Function" group="" helpmode="Append" animate="false"><value>1</value><cond type="Enable" /><help /><choice>1 = Sin</choice><choice>2 = Cos</choice><choice>3 = Tan</choice><choice>-1 = ArcSin</choice><choice>-2 = ArcCos</choice><choice>-3 = ArcTan</choice></parameter><parameter type="Choice" name="Mode" desc="Angles Measured in" group="" helpmode="Overwrite" animate="false"><value>0</value><cond type="Enable" /><help>Select Radians or Degrees</help><choice>0 = Radians</choice><choice>1 = Degrees</choice></parameter><parameter type="Text" name="COM" desc="Fortran Comment" group="" helpmode="Append" allowemptystr="false"><value>Trig-Func</value><cond type="Enable" /><help>Optional comment line written to generated source code</help><regex /><error_msg /></parameter><parameter type="Integer" name="Dim" desc="Dimension" content_type="Literal" min="1" max="2147483647" unit="" group="" helpmode="Append" intent="Input" dim="1" animate="false"><value>1</value><cond type="Enable" /><help>Enter the dimension of input/output signals</help></parameter><parameter name="const" desc="Constant" type="Boolean" group="" helpmode="Overwrite"><cond>true</cond><value>false</value><choice>true = Constant</choice><choice>false = Variable</choice><help>If this is set to constant, then the inut and output will not change thoughout the simulation run. And the output can be used as constant input to a #BEGIN section to initialize a component.</help></parameter><cond>true</cond></category></form><script><segment name="Fortran" id="1083390443" classid="CoreSegment">#IF !const
+      ! $COM
+ #IF Type!=0
+  #IF Dim==1
+      $OUT = ~
+   #CASE Type+3 {~ATAN~}{~ACOS~}{~ASIN~}{~~}{~SIN~}{~COS~}{~TAN~}
+   #IF Mode
+    #IF Type&gt;0 {~($IN * PI_BY180)} {~($IN) * BY180_PI}
+   #ELSE
+~($IN)
+   #ENDIF
+  #ELSEIF Dim&gt;1
+   #LOCAL INTEGER IVD1_1
+      DO IVD1_1=1,$Dim
+        $OUT(IVD1_1) = ~
+   #CASE Type+3 {~ATAN~}{~ACOS~}{~ASIN~}{~~}{~SIN~}{~COS~}{~TAN~}
+   #IF Mode
+    #IF Type&gt;0 {~($IN(IVD1_1) * PI_BY180)} {~($IN(IVD1_1)) * BY180_PI}
+   #ELSE
+~($IN(IVD1_1))
+   #ENDIF
+      ENDDO
+  #ENDIF
+ #ENDIF
+#ENDIF</segment><segment name="Dsdyn" id="1083390444" classid="CoreSegment">#IF const
+ #STORAGE RTCF:$Dim
+#ENDIF
+#BEGIN
+ #IF const
+      ! $COM
+  #IF Type!=0
+   #IF Dim==1
+      $OUT = ~
+    #CASE Type+3 {~ATAN~}{~ACOS~}{~ASIN~}{~~}{~SIN~}{~COS~}{~TAN~}
+    #IF Mode
+     #IF Type&gt;0 {~($IN * PI_BY180)} {~($IN) * BY180_PI}
+    #ELSE
+~($IN)
+    #ENDIF
+   #ELSEIF Dim&gt;1
+    #LOCAL INTEGER IVD1_1
+      DO IVD1_1=1,$Dim
+        $OUT(IVD1_1) = ~
+    #CASE Type+3 {~ATAN~}{~ACOS~}{~ASIN~}{~~}{~SIN~}{~COS~}{~TAN~}
+    #IF Mode
+     #IF Type&gt;0 {~($IN(IVD1_1) * PI_BY180)} {~($IN(IVD1_1)) * BY180_PI}
+    #ELSE
+~($IN(IVD1_1))
+    #ENDIF
+      ENDDO
+   #ENDIF
+  #ENDIF
+      RTCF(NRTCF~
+   #IF Dim&gt;1 {~:NRTCF+$Dim-1~}{~~}
+~)=$OUT
+      NRTCF=NRTCF+$Dim
+ #ENDIF
+#ENDBEGIN
+#IF const
+      ! $COM
+      $OUT=RTCF(NRTCF~
+ #IF Dim&gt;1 {~:NRTCF+$Dim-1)}{~)}
+      NRTCF=NRTCF+$Dim
+#ENDIF</segment><segment name="Dsout" id="1083390445" classid="CoreSegment">#IF const
+ #STORAGE RTCF:$Dim
+#ENDIF
+#BEGIN
+ #IF const
+      ! $COM
+  #IF Type!=0
+   #IF Dim==1
+      $OUT = ~
+    #CASE Type+3 {~ATAN~}{~ACOS~}{~ASIN~}{~~}{~SIN~}{~COS~}{~TAN~}
+    #IF Mode
+     #IF Type&gt;0 {~($IN * PI_BY180)} {~($IN) * BY180_PI}
+    #ELSE
+~($IN)
+    #ENDIF
+   #ELSEIF Dim&gt;1
+    #LOCAL INTEGER IVD1_1
+      DO IVD1_1=1,$Dim
+        $OUT(IVD1_1) = ~
+    #CASE Type+3 {~ATAN~}{~ACOS~}{~ASIN~}{~~}{~SIN~}{~COS~}{~TAN~}
+    #IF Mode
+     #IF Type&gt;0 {~($IN(IVD1_1) * PI_BY180)} {~($IN(IVD1_1)) * BY180_PI}
+    #ELSE
+~($IN(IVD1_1))
+    #ENDIF
+      ENDDO
+   #ENDIF
+  #ENDIF
+      RTCF(NRTCF~
+   #IF Dim&gt;1 {~:NRTCF+$Dim-1~}{~~}
+~)=$OUT
+      NRTCF=NRTCF+$Dim
+ #ENDIF
+#ENDBEGIN
+#IF const
+      ! $COM
+      $OUT=RTCF(NRTCF~
+ #IF Dim&gt;1 {~:NRTCF+$Dim-1)}{~)}
+      NRTCF=NRTCF+$Dim
+#ENDIF</segment><segment name="FlyBy" id="1754846943" classid="CoreSegment">Trignometric Function
+:IN
+Input
+:OUT
+Output</segment><segment classid="CoreSegment" id="236537578" name="C">#INCLUDE $(HomeDir)\CCoder\stdinc.pds
+#IF Type == 0
+  #ERROR "Invalid Trig Type" 
+#ENDIF
+#IF Dim == 1
+$OUT = ~
+  #CASE Type+3 {~$atan~}{~$acos~}{~$asin~}{~~}{~$sin~}{~$cos~}{~$tan~}
+  #IF Mode
+    #IF Type&gt;0 {~(($IN*180.0)/M_PI);} {~($IN)*180.0/M_PI;}
+  #ELSE
+~($IN);
+  #ENDIF	
+#ELSEIF Dim &gt; 1
+  #LOCAL INTEGER IVD1_1
+for (IVD1_1 = 0; IVD1_1 &lt; $Dim; IVD1_1++) {
+	$OUT[IVD1_1] = ~
+  #CASE Type+3 {~$atan~}{~$acos~}{~$asin~}{~~}{~s$in~}{~$cos~}{~$tan~}
+  #IF Mode
+    #IF Type&gt;0 {~(($IN[IVD1_1]*180.0)/M_PI);} {~($IN[IVD1_1])*180.0/M_PI;}
+  #ELSE
+~($IN[IVD1_1]);
+  #ENDIF
+}
+#ENDIF</segment></script><graphics size="4"><paramlist><param name="show_border" value="0" /><param name="show_grid" value="0" /><param name="size" value="0" /><param name="orient" value="1" /><param name="lock_style" value="3" /><param name="lock_cx" value="0" /><param name="lock_cy" value="0" /></paramlist><Port id="1250501589" classid="Port" x="36" y="0"><paramlist><param name="name" value="OUT:Dim" /><param name="internal" value="false" /><param name="cond" value="true" /><param name="const" value="const" /><param name="mode" value="2" /><param name="datatype" value="3" /><param name="electype" value="0" /><param name="dim" value="0" /></paramlist></Port><Port id="1508700307" classid="Port" x="-36" y="0"><paramlist><param name="name" value="IN:Dim" /><param name="internal" value="false" /><param name="cond" value="true" /><param name="const" value="const" /><param name="mode" value="1" /><param name="datatype" value="3" /><param name="electype" value="0" /><param name="dim" value="0" /></paramlist></Port><Gfx classid="Graphics.Rectangle" id="1770901656" x="-27" y="-15" w="54" h="30"><paramlist><param name="color" value="Black" /><param name="dasharray" value="0" /><param name="thickness" value="0" /><param name="port" value="" /><param name="fill_style" value="1" /><param name="fill_fg" value="#ffffffff" /><param name="fill_bg" value="White" /><param name="cond" value="true" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Line" id="1462036379" x="-36" y="0"><vertex x="0" y="0" /><vertex x="9" y="0" /><paramlist><param name="color" value="Black" /><param name="dasharray" value="0" /><param name="thickness" value="0" /><param name="port" value="" /><param name="cond" value="true" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Line" id="1539409609" x="-32" y="-5"><vertex x="0" y="0" /><vertex x="5" y="5" /><paramlist><param name="color" value="Black" /><param name="dasharray" value="0" /><param name="thickness" value="0" /><param name="port" value="" /><param name="cond" value="true" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Line" id="756761515" x="-27" y="0"><vertex x="0" y="0" /><vertex x="-5" y="5" /><paramlist><param name="color" value="Black" /><param name="dasharray" value="0" /><param name="thickness" value="0" /><param name="port" value="" /><param name="cond" value="true" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Line" id="428776986" x="27" y="0"><vertex x="0" y="0" /><vertex x="9" y="0" /><paramlist><param name="color" value="Black" /><param name="dasharray" value="0" /><param name="thickness" value="0" /><param name="port" value="" /><param name="cond" value="true" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Line" id="194249380" x="-32" y="-2"><vertex x="0" y="0" /><vertex x="-2" y="4" /><paramlist><param name="color" value="Gray" /><param name="dasharray" value="0" /><param name="thickness" value="0" /><param name="port" value="" /><param name="cond" value="Dim!=1" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Line" id="988789348" x="33" y="-3"><vertex x="0" y="0" /><vertex x="-2" y="6" /><paramlist><param name="color" value="Gray" /><param name="dasharray" value="0" /><param name="thickness" value="0" /><param name="port" value="" /><param name="cond" value="Dim!=1" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="1563517208" x="0" y="6"><paramlist><param name="color" value="Black" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="(Type==1)" /><param name="text" value="Sin" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="true" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="595563651" x="0" y="6"><paramlist><param name="color" value="Black" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="(Type==-1)" /><param name="text" value="ArcSin" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="true" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="697478967" x="0" y="6"><paramlist><param name="color" value="Black" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="(Type==2)" /><param name="text" value="Cos" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="true" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="2145093304" x="0" y="6"><paramlist><param name="color" value="Black" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="(Type==-2)" /><param name="text" value="ArcCos" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="true" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="1338652954" x="0" y="6"><paramlist><param name="color" value="Black" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="(Type==3)" /><param name="text" value="Tan" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="true" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="854790340" x="0" y="6"><paramlist><param name="color" value="Black" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="(Type==-3)" /><param name="text" value="ArcTan" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="true" /></paramlist></Gfx></graphics></Definition>

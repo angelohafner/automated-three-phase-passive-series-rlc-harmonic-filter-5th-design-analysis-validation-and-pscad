@@ -1,0 +1,6 @@
+<Meta name="HarmonicBase">
+  <messagelist />
+  <ViewContext>
+    <Window defn="HarmonicBase:Main" call="0" />
+  </ViewContext>
+</Meta>

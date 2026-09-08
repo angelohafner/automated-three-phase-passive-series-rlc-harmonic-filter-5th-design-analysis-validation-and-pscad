@@ -1,0 +1,14 @@
+<workspace name="HarmonicFilter" version="5.1.0" crc="88855829">
+  <projects>
+    <project type="project" name="without_filter" filepath=".\projects\without_filter.pscx" open="true" />
+  </projects>
+  <simulations />
+  <pmr />
+  <messagegrid expanded="">
+    <column name="Icon" />
+    <column name="Id" />
+    <column name="Component" />
+    <column name="Namespace" />
+    <column name="Description" />
+  </messagegrid>
+</workspace>

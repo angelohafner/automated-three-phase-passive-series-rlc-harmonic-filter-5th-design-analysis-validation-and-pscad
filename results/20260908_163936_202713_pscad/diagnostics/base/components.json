@@ -1,0 +1,9583 @@
+[
+  {
+    "iid": 472465610,
+    "definition": "master:source_1",
+    "location": [
+      12,
+      22
+    ],
+    "parameters": {
+      "Name": "GridSource_A",
+      "Type": "IDEAL",
+      "Grnd": "YES",
+      "Spec": "BEHIND_SOURCE_IMPEDANCE",
+      "Cntrl": "INTERNAL",
+      "AC": "AC",
+      "Vm": 0.277128129211,
+      "Tc": 0.02,
+      "Ph": 0.0,
+      "f": 60.0,
+      "P": 0.0,
+      "Q": 0.0,
+      "R": 1.0,
+      "Rs": 1.0,
+      "Rp": 1.0,
+      "Lp": 0.1,
+      "R_": 1.0,
+      "L": 0.1,
+      "C": 1.0,
+      "L_": 0.1,
+      "C_": 1.0,
+      "CUR": ""
+    },
+    "ports": {
+      "NA": [
+        14,
+        22,
+        "NA",
+        1,
+        3,
+        0,
+        15
+      ],
+      "NB": [
+        10,
+        22,
+        "NB",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1145370409,
+    "definition": "master:resistor",
+    "location": [
+      22,
+      22
+    ],
+    "parameters": {
+      "Name": "GridR_A",
+      "R": 0.02
+    },
+    "ports": {
+      "A": [
+        22,
+        22,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        24,
+        22,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1698992016,
+    "definition": "master:inductor",
+    "location": [
+      30,
+      22
+    ],
+    "parameters": {
+      "Name": "GridL_A",
+      "L": 0.0002
+    },
+    "ports": {
+      "B": [
+        32,
+        22,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ],
+      "A": [
+        30,
+        22,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1814259557,
+    "definition": "master:ammeter",
+    "location": [
+      40,
+      22
+    ],
+    "parameters": {
+      "Name": "Isystem_A"
+    },
+    "ports": {
+      "N2": [
+        38,
+        22,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        40,
+        22,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 156047708,
+    "definition": "master:voltmetergnd",
+    "location": [
+      46,
+      22
+    ],
+    "parameters": {
+      "Name": "Vpcc_A"
+    },
+    "ports": {
+      "N1": [
+        46,
+        22,
+        "N1",
+        0,
+        3,
+        0,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 56112385,
+    "definition": "master:ammeter",
+    "location": [
+      49,
+      28
+    ],
+    "parameters": {
+      "Name": "Ifilter_A"
+    },
+    "ports": {
+      "N2": [
+        51,
+        28,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        49,
+        28,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 897519430,
+    "definition": "master:breaker1",
+    "location": [
+      55,
+      28
+    ],
+    "parameters": {
+      "NAME": "FilterState",
+      "OPCUR": "NO",
+      "ENAB": "NO",
+      "ViewB": "HIGH_VOLTAGE",
+      "CLVL": 0.0,
+      "ROFF": 1000000000000.0,
+      "RON": 1e-06,
+      "PRER": 0.1,
+      "TD": 0.0,
+      "TDR": 0.05,
+      "PostIns": "AT_NEXT_CURRENT_ZERO",
+      "TDBO": 0.005,
+      "IBR": "",
+      "SBR": "",
+      "VBR": "",
+      "BOpen": "CLOSE"
+    },
+    "ports": {
+      "A": [
+        57,
+        28,
+        "A",
+        1,
+        3,
+        0,
+        15
+      ],
+      "B": [
+        53,
+        28,
+        "B",
+        1,
+        3,
+        0,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1558364948,
+    "definition": "master:resistor",
+    "location": [
+      61,
+      28
+    ],
+    "parameters": {
+      "Name": "FilterR_A",
+      "R": 0.03
+    },
+    "ports": {
+      "A": [
+        61,
+        28,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        63,
+        28,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1634088042,
+    "definition": "master:inductor",
+    "location": [
+      68,
+      28
+    ],
+    "parameters": {
+      "Name": "FilterL_A",
+      "L": 0.001
+    },
+    "ports": {
+      "B": [
+        70,
+        28,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ],
+      "A": [
+        68,
+        28,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 997088957,
+    "definition": "master:capacitor",
+    "location": [
+      75,
+      28
+    ],
+    "parameters": {
+      "Name": "FilterC_A",
+      "C": 300.0
+    },
+    "ports": {
+      "A": [
+        75,
+        28,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        77,
+        28,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 907956943,
+    "definition": "master:ground",
+    "location": [
+      77,
+      30
+    ],
+    "parameters": {},
+    "ports": {
+      "A": [
+        77,
+        30,
+        "A",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 816277880,
+    "definition": "master:ammeter",
+    "location": [
+      49,
+      36
+    ],
+    "parameters": {
+      "Name": "Ilinear_A"
+    },
+    "ports": {
+      "N2": [
+        51,
+        36,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        49,
+        36,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1964637813,
+    "definition": "master:resistor",
+    "location": [
+      61,
+      36
+    ],
+    "parameters": {
+      "Name": "LinearR_A",
+      "R": 11.52
+    },
+    "ports": {
+      "A": [
+        61,
+        36,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        63,
+        36,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 884283065,
+    "definition": "master:ground",
+    "location": [
+      63,
+      38
+    ],
+    "parameters": {},
+    "ports": {
+      "A": [
+        63,
+        38,
+        "A",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 799254312,
+    "definition": "master:src_ccin_1",
+    "location": [
+      73,
+      44
+    ],
+    "parameters": {
+      "Name": "HarmonicSource_A",
+      "Cntrl": "YES",
+      "Vm": 0.251,
+      "f": 60.0,
+      "Ph": 0.0,
+      "Tc": 0.05
+    },
+    "ports": {
+      "Mag": [
+        73,
+        46,
+        "Mag",
+        1,
+        1,
+        0,
+        3
+      ],
+      "A": [
+        73,
+        44,
+        "A",
+        1,
+        3,
+        0,
+        15
+      ],
+      "B": [
+        75,
+        44,
+        "B",
+        1,
+        3,
+        0,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 418069277,
+    "definition": "master:ammeter",
+    "location": [
+      63,
+      44
+    ],
+    "parameters": {
+      "Name": "Iload_A"
+    },
+    "ports": {
+      "N2": [
+        61,
+        44,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        63,
+        44,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 292281648,
+    "definition": "master:ground",
+    "location": [
+      75,
+      46
+    ],
+    "parameters": {},
+    "ports": {
+      "A": [
+        75,
+        46,
+        "A",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1462644781,
+    "definition": "master:datalabel",
+    "location": [
+      73,
+      46
+    ],
+    "parameters": {
+      "Name": "CurrentCommand_A",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        73,
+        46,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1797349487,
+    "definition": "master:source_1",
+    "location": [
+      12,
+      62
+    ],
+    "parameters": {
+      "Name": "GridSource_B",
+      "Type": "IDEAL",
+      "Grnd": "YES",
+      "Spec": "BEHIND_SOURCE_IMPEDANCE",
+      "Cntrl": "INTERNAL",
+      "AC": "AC",
+      "Vm": 0.277128129211,
+      "Tc": 0.02,
+      "Ph": -120.0,
+      "f": 60.0,
+      "P": 0.0,
+      "Q": 0.0,
+      "R": 1.0,
+      "Rs": 1.0,
+      "Rp": 1.0,
+      "Lp": 0.1,
+      "R_": 1.0,
+      "L": 0.1,
+      "C": 1.0,
+      "L_": 0.1,
+      "C_": 1.0,
+      "CUR": ""
+    },
+    "ports": {
+      "NA": [
+        14,
+        62,
+        "NA",
+        1,
+        3,
+        0,
+        15
+      ],
+      "NB": [
+        10,
+        62,
+        "NB",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 555362266,
+    "definition": "master:resistor",
+    "location": [
+      22,
+      62
+    ],
+    "parameters": {
+      "Name": "GridR_B",
+      "R": 0.02
+    },
+    "ports": {
+      "A": [
+        22,
+        62,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        24,
+        62,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1824115230,
+    "definition": "master:inductor",
+    "location": [
+      30,
+      62
+    ],
+    "parameters": {
+      "Name": "GridL_B",
+      "L": 0.0002
+    },
+    "ports": {
+      "B": [
+        32,
+        62,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ],
+      "A": [
+        30,
+        62,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 2117354803,
+    "definition": "master:ammeter",
+    "location": [
+      40,
+      62
+    ],
+    "parameters": {
+      "Name": "Isystem_B"
+    },
+    "ports": {
+      "N2": [
+        38,
+        62,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        40,
+        62,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 241619917,
+    "definition": "master:voltmetergnd",
+    "location": [
+      46,
+      62
+    ],
+    "parameters": {
+      "Name": "Vpcc_B"
+    },
+    "ports": {
+      "N1": [
+        46,
+        62,
+        "N1",
+        0,
+        3,
+        0,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 765015132,
+    "definition": "master:ammeter",
+    "location": [
+      49,
+      68
+    ],
+    "parameters": {
+      "Name": "Ifilter_B"
+    },
+    "ports": {
+      "N2": [
+        51,
+        68,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        49,
+        68,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 362588826,
+    "definition": "master:breaker1",
+    "location": [
+      55,
+      68
+    ],
+    "parameters": {
+      "NAME": "FilterState",
+      "OPCUR": "NO",
+      "ENAB": "NO",
+      "ViewB": "HIGH_VOLTAGE",
+      "CLVL": 0.0,
+      "ROFF": 1000000000000.0,
+      "RON": 1e-06,
+      "PRER": 0.1,
+      "TD": 0.0,
+      "TDR": 0.05,
+      "PostIns": "AT_NEXT_CURRENT_ZERO",
+      "TDBO": 0.005,
+      "IBR": "",
+      "SBR": "",
+      "VBR": "",
+      "BOpen": "CLOSE"
+    },
+    "ports": {
+      "A": [
+        57,
+        68,
+        "A",
+        1,
+        3,
+        0,
+        15
+      ],
+      "B": [
+        53,
+        68,
+        "B",
+        1,
+        3,
+        0,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1810634752,
+    "definition": "master:resistor",
+    "location": [
+      61,
+      68
+    ],
+    "parameters": {
+      "Name": "FilterR_B",
+      "R": 0.03
+    },
+    "ports": {
+      "A": [
+        61,
+        68,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        63,
+        68,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 833761858,
+    "definition": "master:inductor",
+    "location": [
+      68,
+      68
+    ],
+    "parameters": {
+      "Name": "FilterL_B",
+      "L": 0.001
+    },
+    "ports": {
+      "B": [
+        70,
+        68,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ],
+      "A": [
+        68,
+        68,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 222272076,
+    "definition": "master:capacitor",
+    "location": [
+      75,
+      68
+    ],
+    "parameters": {
+      "Name": "FilterC_B",
+      "C": 300.0
+    },
+    "ports": {
+      "A": [
+        75,
+        68,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        77,
+        68,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1360756460,
+    "definition": "master:ground",
+    "location": [
+      77,
+      70
+    ],
+    "parameters": {},
+    "ports": {
+      "A": [
+        77,
+        70,
+        "A",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1724670364,
+    "definition": "master:ammeter",
+    "location": [
+      49,
+      76
+    ],
+    "parameters": {
+      "Name": "Ilinear_B"
+    },
+    "ports": {
+      "N2": [
+        51,
+        76,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        49,
+        76,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1387218494,
+    "definition": "master:resistor",
+    "location": [
+      61,
+      76
+    ],
+    "parameters": {
+      "Name": "LinearR_B",
+      "R": 11.52
+    },
+    "ports": {
+      "A": [
+        61,
+        76,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        63,
+        76,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1023998449,
+    "definition": "master:ground",
+    "location": [
+      63,
+      78
+    ],
+    "parameters": {},
+    "ports": {
+      "A": [
+        63,
+        78,
+        "A",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 172744912,
+    "definition": "master:src_ccin_1",
+    "location": [
+      73,
+      84
+    ],
+    "parameters": {
+      "Name": "HarmonicSource_B",
+      "Cntrl": "YES",
+      "Vm": 0.251,
+      "f": 60.0,
+      "Ph": 0.0,
+      "Tc": 0.05
+    },
+    "ports": {
+      "Mag": [
+        73,
+        86,
+        "Mag",
+        1,
+        1,
+        0,
+        3
+      ],
+      "A": [
+        73,
+        84,
+        "A",
+        1,
+        3,
+        0,
+        15
+      ],
+      "B": [
+        75,
+        84,
+        "B",
+        1,
+        3,
+        0,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 799239162,
+    "definition": "master:ammeter",
+    "location": [
+      63,
+      84
+    ],
+    "parameters": {
+      "Name": "Iload_B"
+    },
+    "ports": {
+      "N2": [
+        61,
+        84,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        63,
+        84,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 917273424,
+    "definition": "master:ground",
+    "location": [
+      75,
+      86
+    ],
+    "parameters": {},
+    "ports": {
+      "A": [
+        75,
+        86,
+        "A",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1907377170,
+    "definition": "master:datalabel",
+    "location": [
+      73,
+      86
+    ],
+    "parameters": {
+      "Name": "CurrentCommand_B",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        73,
+        86,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1352878917,
+    "definition": "master:source_1",
+    "location": [
+      12,
+      102
+    ],
+    "parameters": {
+      "Name": "GridSource_C",
+      "Type": "IDEAL",
+      "Grnd": "YES",
+      "Spec": "BEHIND_SOURCE_IMPEDANCE",
+      "Cntrl": "INTERNAL",
+      "AC": "AC",
+      "Vm": 0.277128129211,
+      "Tc": 0.02,
+      "Ph": 120.0,
+      "f": 60.0,
+      "P": 0.0,
+      "Q": 0.0,
+      "R": 1.0,
+      "Rs": 1.0,
+      "Rp": 1.0,
+      "Lp": 0.1,
+      "R_": 1.0,
+      "L": 0.1,
+      "C": 1.0,
+      "L_": 0.1,
+      "C_": 1.0,
+      "CUR": ""
+    },
+    "ports": {
+      "NA": [
+        14,
+        102,
+        "NA",
+        1,
+        3,
+        0,
+        15
+      ],
+      "NB": [
+        10,
+        102,
+        "NB",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1964968540,
+    "definition": "master:resistor",
+    "location": [
+      22,
+      102
+    ],
+    "parameters": {
+      "Name": "GridR_C",
+      "R": 0.02
+    },
+    "ports": {
+      "A": [
+        22,
+        102,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        24,
+        102,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1858015953,
+    "definition": "master:inductor",
+    "location": [
+      30,
+      102
+    ],
+    "parameters": {
+      "Name": "GridL_C",
+      "L": 0.0002
+    },
+    "ports": {
+      "B": [
+        32,
+        102,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ],
+      "A": [
+        30,
+        102,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1482266562,
+    "definition": "master:ammeter",
+    "location": [
+      40,
+      102
+    ],
+    "parameters": {
+      "Name": "Isystem_C"
+    },
+    "ports": {
+      "N2": [
+        38,
+        102,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        40,
+        102,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 236130107,
+    "definition": "master:voltmetergnd",
+    "location": [
+      46,
+      102
+    ],
+    "parameters": {
+      "Name": "Vpcc_C"
+    },
+    "ports": {
+      "N1": [
+        46,
+        102,
+        "N1",
+        0,
+        3,
+        0,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1966775447,
+    "definition": "master:ammeter",
+    "location": [
+      49,
+      108
+    ],
+    "parameters": {
+      "Name": "Ifilter_C"
+    },
+    "ports": {
+      "N2": [
+        51,
+        108,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        49,
+        108,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1307075085,
+    "definition": "master:breaker1",
+    "location": [
+      55,
+      108
+    ],
+    "parameters": {
+      "NAME": "FilterState",
+      "OPCUR": "NO",
+      "ENAB": "NO",
+      "ViewB": "HIGH_VOLTAGE",
+      "CLVL": 0.0,
+      "ROFF": 1000000000000.0,
+      "RON": 1e-06,
+      "PRER": 0.1,
+      "TD": 0.0,
+      "TDR": 0.05,
+      "PostIns": "AT_NEXT_CURRENT_ZERO",
+      "TDBO": 0.005,
+      "IBR": "",
+      "SBR": "",
+      "VBR": "",
+      "BOpen": "CLOSE"
+    },
+    "ports": {
+      "A": [
+        57,
+        108,
+        "A",
+        1,
+        3,
+        0,
+        15
+      ],
+      "B": [
+        53,
+        108,
+        "B",
+        1,
+        3,
+        0,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 119124352,
+    "definition": "master:resistor",
+    "location": [
+      61,
+      108
+    ],
+    "parameters": {
+      "Name": "FilterR_C",
+      "R": 0.03
+    },
+    "ports": {
+      "A": [
+        61,
+        108,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        63,
+        108,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1728682743,
+    "definition": "master:inductor",
+    "location": [
+      68,
+      108
+    ],
+    "parameters": {
+      "Name": "FilterL_C",
+      "L": 0.001
+    },
+    "ports": {
+      "B": [
+        70,
+        108,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ],
+      "A": [
+        68,
+        108,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1164557512,
+    "definition": "master:capacitor",
+    "location": [
+      75,
+      108
+    ],
+    "parameters": {
+      "Name": "FilterC_C",
+      "C": 300.0
+    },
+    "ports": {
+      "A": [
+        75,
+        108,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        77,
+        108,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1409048342,
+    "definition": "master:ground",
+    "location": [
+      77,
+      110
+    ],
+    "parameters": {},
+    "ports": {
+      "A": [
+        77,
+        110,
+        "A",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1466681556,
+    "definition": "master:ammeter",
+    "location": [
+      49,
+      116
+    ],
+    "parameters": {
+      "Name": "Ilinear_C"
+    },
+    "ports": {
+      "N2": [
+        51,
+        116,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        49,
+        116,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 774580531,
+    "definition": "master:resistor",
+    "location": [
+      61,
+      116
+    ],
+    "parameters": {
+      "Name": "LinearR_C",
+      "R": 11.52
+    },
+    "ports": {
+      "A": [
+        61,
+        116,
+        "A",
+        0,
+        3,
+        1,
+        15
+      ],
+      "B": [
+        63,
+        116,
+        "B",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 519893945,
+    "definition": "master:ground",
+    "location": [
+      63,
+      118
+    ],
+    "parameters": {},
+    "ports": {
+      "A": [
+        63,
+        118,
+        "A",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 212242400,
+    "definition": "master:src_ccin_1",
+    "location": [
+      73,
+      124
+    ],
+    "parameters": {
+      "Name": "HarmonicSource_C",
+      "Cntrl": "YES",
+      "Vm": 0.251,
+      "f": 60.0,
+      "Ph": 0.0,
+      "Tc": 0.05
+    },
+    "ports": {
+      "Mag": [
+        73,
+        126,
+        "Mag",
+        1,
+        1,
+        0,
+        3
+      ],
+      "A": [
+        73,
+        124,
+        "A",
+        1,
+        3,
+        0,
+        15
+      ],
+      "B": [
+        75,
+        124,
+        "B",
+        1,
+        3,
+        0,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1542875142,
+    "definition": "master:ammeter",
+    "location": [
+      63,
+      124
+    ],
+    "parameters": {
+      "Name": "Iload_C"
+    },
+    "ports": {
+      "N2": [
+        61,
+        124,
+        "N2",
+        0,
+        3,
+        1,
+        15
+      ],
+      "N1": [
+        63,
+        124,
+        "N1",
+        0,
+        3,
+        1,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1930855215,
+    "definition": "master:ground",
+    "location": [
+      75,
+      126
+    ],
+    "parameters": {},
+    "ports": {
+      "A": [
+        75,
+        126,
+        "A",
+        1,
+        3,
+        3,
+        15
+      ]
+    }
+  },
+  {
+    "iid": 1723823247,
+    "definition": "master:datalabel",
+    "location": [
+      73,
+      126
+    ],
+    "parameters": {
+      "Name": "CurrentCommand_C",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        73,
+        126,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1633116830,
+    "definition": "master:time-sig",
+    "location": [
+      10,
+      155
+    ],
+    "parameters": {},
+    "ports": {
+      "OUT": [
+        12,
+        155,
+        "OUT",
+        1,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 713729760,
+    "definition": "master:datalabel",
+    "location": [
+      12,
+      155
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        12,
+        155,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 796228535,
+    "definition": "master:const",
+    "location": [
+      25,
+      155
+    ],
+    "parameters": {
+      "Name": "FilterEnabled",
+      "Value": 0.0,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        27,
+        155,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 670991216,
+    "definition": "master:datalabel",
+    "location": [
+      27,
+      155
+    ],
+    "parameters": {
+      "Name": "FilterState",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        27,
+        155,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 729464847,
+    "definition": "master:const",
+    "location": [
+      40,
+      155
+    ],
+    "parameters": {
+      "Name": "Zero",
+      "Value": 0.0,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        42,
+        155,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 405155613,
+    "definition": "master:datalabel",
+    "location": [
+      42,
+      155
+    ],
+    "parameters": {
+      "Name": "ZeroSignal",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        42,
+        155,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1481803430,
+    "definition": "master:gain",
+    "location": [
+      110,
+      22
+    ],
+    "parameters": {
+      "Name": "Omega_A_1",
+      "G": 376.99111843077515,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        112,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        108,
+        22,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 404069280,
+    "definition": "master:datalabel",
+    "location": [
+      108,
+      22
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        108,
+        22,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1494706457,
+    "definition": "master:const",
+    "location": [
+      120,
+      27
+    ],
+    "parameters": {
+      "Name": "Phase_A_1",
+      "Value": -3.141592653589793,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        122,
+        27,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 867645716,
+    "definition": "master:sumjct",
+    "location": [
+      128,
+      22
+    ],
+    "parameters": {
+      "Name": "Angle_A_1",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        126,
+        22,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        128,
+        24,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        130,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 643871188,
+    "definition": "master:trig",
+    "location": [
+      136,
+      22
+    ],
+    "parameters": {
+      "Name": "Sine_A_1",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        138,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        134,
+        22,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1671357309,
+    "definition": "master:gain",
+    "location": [
+      144,
+      22
+    ],
+    "parameters": {
+      "Name": "Amplitude_A_1",
+      "G": 0.1414213562373095,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        146,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        142,
+        22,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 857001451,
+    "definition": "master:datalabel",
+    "location": [
+      146,
+      22
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        146,
+        22,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 295659611,
+    "definition": "master:gain",
+    "location": [
+      110,
+      36
+    ],
+    "parameters": {
+      "Name": "Omega_A_3",
+      "G": 1130.9733552923253,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        112,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        108,
+        36,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 978772598,
+    "definition": "master:datalabel",
+    "location": [
+      108,
+      36
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        108,
+        36,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 2123775808,
+    "definition": "master:const",
+    "location": [
+      120,
+      41
+    ],
+    "parameters": {
+      "Name": "Phase_A_3",
+      "Value": 0.2617993877991494,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        122,
+        41,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 437506899,
+    "definition": "master:sumjct",
+    "location": [
+      128,
+      36
+    ],
+    "parameters": {
+      "Name": "Angle_A_3",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        126,
+        36,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        128,
+        38,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        130,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1677277840,
+    "definition": "master:trig",
+    "location": [
+      136,
+      36
+    ],
+    "parameters": {
+      "Name": "Sine_A_3",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        138,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        134,
+        36,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 415166578,
+    "definition": "master:gain",
+    "location": [
+      144,
+      36
+    ],
+    "parameters": {
+      "Name": "Amplitude_A_3",
+      "G": 0.007071067811865475,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        146,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        142,
+        36,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1653253715,
+    "definition": "master:datalabel",
+    "location": [
+      146,
+      36
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        146,
+        36,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 898219791,
+    "definition": "master:gain",
+    "location": [
+      110,
+      50
+    ],
+    "parameters": {
+      "Name": "Omega_A_5",
+      "G": 1884.9555921538758,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        112,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        108,
+        50,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1734408199,
+    "definition": "master:datalabel",
+    "location": [
+      108,
+      50
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        108,
+        50,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1555603479,
+    "definition": "master:const",
+    "location": [
+      120,
+      55
+    ],
+    "parameters": {
+      "Name": "Phase_A_5",
+      "Value": -0.4363323129985824,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        122,
+        55,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1670042045,
+    "definition": "master:sumjct",
+    "location": [
+      128,
+      50
+    ],
+    "parameters": {
+      "Name": "Angle_A_5",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        126,
+        50,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        128,
+        52,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        130,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1220574631,
+    "definition": "master:trig",
+    "location": [
+      136,
+      50
+    ],
+    "parameters": {
+      "Name": "Sine_A_5",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        138,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        134,
+        50,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1226705491,
+    "definition": "master:gain",
+    "location": [
+      144,
+      50
+    ],
+    "parameters": {
+      "Name": "Amplitude_A_5",
+      "G": 0.0282842712474619,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        146,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        142,
+        50,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 2036499568,
+    "definition": "master:datalabel",
+    "location": [
+      146,
+      50
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_5",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        146,
+        50,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 854611033,
+    "definition": "master:gain",
+    "location": [
+      110,
+      64
+    ],
+    "parameters": {
+      "Name": "Omega_A_7",
+      "G": 2638.937829015426,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        112,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        108,
+        64,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 349733566,
+    "definition": "master:datalabel",
+    "location": [
+      108,
+      64
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        108,
+        64,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 710071058,
+    "definition": "master:const",
+    "location": [
+      120,
+      69
+    ],
+    "parameters": {
+      "Name": "Phase_A_7",
+      "Value": 0.3490658503988659,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        122,
+        69,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 563758000,
+    "definition": "master:sumjct",
+    "location": [
+      128,
+      64
+    ],
+    "parameters": {
+      "Name": "Angle_A_7",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        126,
+        64,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        128,
+        66,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        130,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 737535737,
+    "definition": "master:trig",
+    "location": [
+      136,
+      64
+    ],
+    "parameters": {
+      "Name": "Sine_A_7",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        138,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        134,
+        64,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1776563286,
+    "definition": "master:gain",
+    "location": [
+      144,
+      64
+    ],
+    "parameters": {
+      "Name": "Amplitude_A_7",
+      "G": 0.01979898987322333,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        146,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        142,
+        64,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 488212598,
+    "definition": "master:datalabel",
+    "location": [
+      146,
+      64
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_7",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        146,
+        64,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 986649232,
+    "definition": "master:gain",
+    "location": [
+      110,
+      78
+    ],
+    "parameters": {
+      "Name": "Omega_A_11",
+      "G": 4146.9023027385265,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        112,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        108,
+        78,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1892236484,
+    "definition": "master:datalabel",
+    "location": [
+      108,
+      78
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        108,
+        78,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 658555938,
+    "definition": "master:const",
+    "location": [
+      120,
+      83
+    ],
+    "parameters": {
+      "Name": "Phase_A_11",
+      "Value": -0.17453292519943295,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        122,
+        83,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 479693576,
+    "definition": "master:sumjct",
+    "location": [
+      128,
+      78
+    ],
+    "parameters": {
+      "Name": "Angle_A_11",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        126,
+        78,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        128,
+        80,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        130,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1677131457,
+    "definition": "master:trig",
+    "location": [
+      136,
+      78
+    ],
+    "parameters": {
+      "Name": "Sine_A_11",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        138,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        134,
+        78,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1930801163,
+    "definition": "master:gain",
+    "location": [
+      144,
+      78
+    ],
+    "parameters": {
+      "Name": "Amplitude_A_11",
+      "G": 0.0,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        146,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        142,
+        78,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1637662476,
+    "definition": "master:datalabel",
+    "location": [
+      146,
+      78
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_11",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        146,
+        78,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1808306358,
+    "definition": "master:gain",
+    "location": [
+      110,
+      92
+    ],
+    "parameters": {
+      "Name": "Omega_A_13",
+      "G": 4900.884539600077,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        112,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        108,
+        92,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 317896620,
+    "definition": "master:datalabel",
+    "location": [
+      108,
+      92
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        108,
+        92,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1782507466,
+    "definition": "master:const",
+    "location": [
+      120,
+      97
+    ],
+    "parameters": {
+      "Name": "Phase_A_13",
+      "Value": 0.5235987755982988,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        122,
+        97,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 83513370,
+    "definition": "master:sumjct",
+    "location": [
+      128,
+      92
+    ],
+    "parameters": {
+      "Name": "Angle_A_13",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        126,
+        92,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        128,
+        94,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        130,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 571162662,
+    "definition": "master:trig",
+    "location": [
+      136,
+      92
+    ],
+    "parameters": {
+      "Name": "Sine_A_13",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        138,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        134,
+        92,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1991533745,
+    "definition": "master:gain",
+    "location": [
+      144,
+      92
+    ],
+    "parameters": {
+      "Name": "Amplitude_A_13",
+      "G": 0.009899494936611665,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        146,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        142,
+        92,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 866365386,
+    "definition": "master:datalabel",
+    "location": [
+      146,
+      92
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_13",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        146,
+        92,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1882342279,
+    "definition": "master:sumjct",
+    "location": [
+      110,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_A_0",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        108,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        110,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        112,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 2122456271,
+    "definition": "master:datalabel",
+    "location": [
+      108,
+      115
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        108,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 914216208,
+    "definition": "master:datalabel",
+    "location": [
+      110,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        110,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1766198300,
+    "definition": "master:datalabel",
+    "location": [
+      112,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_A_0",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        112,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1378946574,
+    "definition": "master:sumjct",
+    "location": [
+      120,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_A_1",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        118,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        120,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        122,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 304212057,
+    "definition": "master:datalabel",
+    "location": [
+      118,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_A_0",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        118,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 709090743,
+    "definition": "master:datalabel",
+    "location": [
+      120,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_5",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        120,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1074126805,
+    "definition": "master:datalabel",
+    "location": [
+      122,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_A_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        122,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 786069352,
+    "definition": "master:sumjct",
+    "location": [
+      130,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_A_2",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        128,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        130,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        132,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1008583853,
+    "definition": "master:datalabel",
+    "location": [
+      128,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_A_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        128,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 426798086,
+    "definition": "master:datalabel",
+    "location": [
+      130,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_7",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        130,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 817688049,
+    "definition": "master:datalabel",
+    "location": [
+      132,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_A_2",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        132,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 875657180,
+    "definition": "master:sumjct",
+    "location": [
+      140,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_A_3",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        138,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        140,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        142,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1132170288,
+    "definition": "master:datalabel",
+    "location": [
+      138,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_A_2",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        138,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1074462311,
+    "definition": "master:datalabel",
+    "location": [
+      140,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_11",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        140,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 83752760,
+    "definition": "master:datalabel",
+    "location": [
+      142,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_A_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        142,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 518937298,
+    "definition": "master:sumjct",
+    "location": [
+      150,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_A_4",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        148,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        150,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        152,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1363594117,
+    "definition": "master:datalabel",
+    "location": [
+      148,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_A_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        148,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1740315998,
+    "definition": "master:datalabel",
+    "location": [
+      150,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_A_13",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        150,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1302742625,
+    "definition": "master:datalabel",
+    "location": [
+      152,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_A_4",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        152,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1818900634,
+    "definition": "master:gain",
+    "location": [
+      125,
+      130
+    ],
+    "parameters": {
+      "Name": "Command_A",
+      "G": 1.0,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        127,
+        130,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        123,
+        130,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1132040820,
+    "definition": "master:datalabel",
+    "location": [
+      123,
+      130
+    ],
+    "parameters": {
+      "Name": "Partial_A_4",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        123,
+        130,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 935353528,
+    "definition": "master:datalabel",
+    "location": [
+      127,
+      130
+    ],
+    "parameters": {
+      "Name": "CurrentCommand_A",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        127,
+        130,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1971414521,
+    "definition": "master:gain",
+    "location": [
+      172,
+      22
+    ],
+    "parameters": {
+      "Name": "Omega_B_1",
+      "G": 376.99111843077515,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        174,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        170,
+        22,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 314476669,
+    "definition": "master:datalabel",
+    "location": [
+      170,
+      22
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        170,
+        22,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1502987752,
+    "definition": "master:const",
+    "location": [
+      182,
+      27
+    ],
+    "parameters": {
+      "Name": "Phase_B_1",
+      "Value": 1.0471975511965976,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        184,
+        27,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 461608958,
+    "definition": "master:sumjct",
+    "location": [
+      190,
+      22
+    ],
+    "parameters": {
+      "Name": "Angle_B_1",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        188,
+        22,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        190,
+        24,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        192,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 36907695,
+    "definition": "master:trig",
+    "location": [
+      198,
+      22
+    ],
+    "parameters": {
+      "Name": "Sine_B_1",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        200,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        196,
+        22,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1203557865,
+    "definition": "master:gain",
+    "location": [
+      206,
+      22
+    ],
+    "parameters": {
+      "Name": "Amplitude_B_1",
+      "G": 0.1414213562373095,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        208,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        204,
+        22,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1133147577,
+    "definition": "master:datalabel",
+    "location": [
+      208,
+      22
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        208,
+        22,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 519897363,
+    "definition": "master:gain",
+    "location": [
+      172,
+      36
+    ],
+    "parameters": {
+      "Name": "Omega_B_3",
+      "G": 1130.9733552923253,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        174,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        170,
+        36,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1200805620,
+    "definition": "master:datalabel",
+    "location": [
+      170,
+      36
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        170,
+        36,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 812142734,
+    "definition": "master:const",
+    "location": [
+      182,
+      41
+    ],
+    "parameters": {
+      "Name": "Phase_B_3",
+      "Value": 0.2617993877991494,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        184,
+        41,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1969181298,
+    "definition": "master:sumjct",
+    "location": [
+      190,
+      36
+    ],
+    "parameters": {
+      "Name": "Angle_B_3",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        188,
+        36,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        190,
+        38,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        192,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 755053786,
+    "definition": "master:trig",
+    "location": [
+      198,
+      36
+    ],
+    "parameters": {
+      "Name": "Sine_B_3",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        200,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        196,
+        36,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1849160333,
+    "definition": "master:gain",
+    "location": [
+      206,
+      36
+    ],
+    "parameters": {
+      "Name": "Amplitude_B_3",
+      "G": 0.007071067811865475,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        208,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        204,
+        36,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1428229491,
+    "definition": "master:datalabel",
+    "location": [
+      208,
+      36
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        208,
+        36,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 972489349,
+    "definition": "master:gain",
+    "location": [
+      172,
+      50
+    ],
+    "parameters": {
+      "Name": "Omega_B_5",
+      "G": 1884.9555921538758,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        174,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        170,
+        50,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1426867311,
+    "definition": "master:datalabel",
+    "location": [
+      170,
+      50
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        170,
+        50,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1112802811,
+    "definition": "master:const",
+    "location": [
+      182,
+      55
+    ],
+    "parameters": {
+      "Name": "Phase_B_5",
+      "Value": 1.6580627893946132,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        184,
+        55,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1464215910,
+    "definition": "master:sumjct",
+    "location": [
+      190,
+      50
+    ],
+    "parameters": {
+      "Name": "Angle_B_5",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        188,
+        50,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        190,
+        52,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        192,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 53068942,
+    "definition": "master:trig",
+    "location": [
+      198,
+      50
+    ],
+    "parameters": {
+      "Name": "Sine_B_5",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        200,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        196,
+        50,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 770057564,
+    "definition": "master:gain",
+    "location": [
+      206,
+      50
+    ],
+    "parameters": {
+      "Name": "Amplitude_B_5",
+      "G": 0.0282842712474619,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        208,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        204,
+        50,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1937195481,
+    "definition": "master:datalabel",
+    "location": [
+      208,
+      50
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_5",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        208,
+        50,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1170028706,
+    "definition": "master:gain",
+    "location": [
+      172,
+      64
+    ],
+    "parameters": {
+      "Name": "Omega_B_7",
+      "G": 2638.937829015426,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        174,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        170,
+        64,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1945925765,
+    "definition": "master:datalabel",
+    "location": [
+      170,
+      64
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        170,
+        64,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1603589485,
+    "definition": "master:const",
+    "location": [
+      182,
+      69
+    ],
+    "parameters": {
+      "Name": "Phase_B_7",
+      "Value": -1.7453292519943295,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        184,
+        69,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1041938325,
+    "definition": "master:sumjct",
+    "location": [
+      190,
+      64
+    ],
+    "parameters": {
+      "Name": "Angle_B_7",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        188,
+        64,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        190,
+        66,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        192,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1558712422,
+    "definition": "master:trig",
+    "location": [
+      198,
+      64
+    ],
+    "parameters": {
+      "Name": "Sine_B_7",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        200,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        196,
+        64,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 110043220,
+    "definition": "master:gain",
+    "location": [
+      206,
+      64
+    ],
+    "parameters": {
+      "Name": "Amplitude_B_7",
+      "G": 0.01979898987322333,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        208,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        204,
+        64,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1836258719,
+    "definition": "master:datalabel",
+    "location": [
+      208,
+      64
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_7",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        208,
+        64,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 490470843,
+    "definition": "master:gain",
+    "location": [
+      172,
+      78
+    ],
+    "parameters": {
+      "Name": "Omega_B_11",
+      "G": 4146.9023027385265,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        174,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        170,
+        78,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1615537130,
+    "definition": "master:datalabel",
+    "location": [
+      170,
+      78
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        170,
+        78,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1792157683,
+    "definition": "master:const",
+    "location": [
+      182,
+      83
+    ],
+    "parameters": {
+      "Name": "Phase_B_11",
+      "Value": 1.9198621771937625,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        184,
+        83,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1309826879,
+    "definition": "master:sumjct",
+    "location": [
+      190,
+      78
+    ],
+    "parameters": {
+      "Name": "Angle_B_11",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        188,
+        78,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        190,
+        80,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        192,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 83831154,
+    "definition": "master:trig",
+    "location": [
+      198,
+      78
+    ],
+    "parameters": {
+      "Name": "Sine_B_11",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        200,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        196,
+        78,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1378924791,
+    "definition": "master:gain",
+    "location": [
+      206,
+      78
+    ],
+    "parameters": {
+      "Name": "Amplitude_B_11",
+      "G": 0.0,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        208,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        204,
+        78,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 411833599,
+    "definition": "master:datalabel",
+    "location": [
+      208,
+      78
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_11",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        208,
+        78,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1471293114,
+    "definition": "master:gain",
+    "location": [
+      172,
+      92
+    ],
+    "parameters": {
+      "Name": "Omega_B_13",
+      "G": 4900.884539600077,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        174,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        170,
+        92,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1188602941,
+    "definition": "master:datalabel",
+    "location": [
+      170,
+      92
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        170,
+        92,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1489669826,
+    "definition": "master:const",
+    "location": [
+      182,
+      97
+    ],
+    "parameters": {
+      "Name": "Phase_B_13",
+      "Value": -1.5707963267948966,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        184,
+        97,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 20256573,
+    "definition": "master:sumjct",
+    "location": [
+      190,
+      92
+    ],
+    "parameters": {
+      "Name": "Angle_B_13",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        188,
+        92,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        190,
+        94,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        192,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 67354698,
+    "definition": "master:trig",
+    "location": [
+      198,
+      92
+    ],
+    "parameters": {
+      "Name": "Sine_B_13",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        200,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        196,
+        92,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 500655690,
+    "definition": "master:gain",
+    "location": [
+      206,
+      92
+    ],
+    "parameters": {
+      "Name": "Amplitude_B_13",
+      "G": 0.009899494936611665,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        208,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        204,
+        92,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 24644181,
+    "definition": "master:datalabel",
+    "location": [
+      208,
+      92
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_13",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        208,
+        92,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1700333570,
+    "definition": "master:sumjct",
+    "location": [
+      172,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_B_0",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        170,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        172,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        174,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1066859124,
+    "definition": "master:datalabel",
+    "location": [
+      170,
+      115
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        170,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 258707127,
+    "definition": "master:datalabel",
+    "location": [
+      172,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        172,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 632407410,
+    "definition": "master:datalabel",
+    "location": [
+      174,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_B_0",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        174,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1761251942,
+    "definition": "master:sumjct",
+    "location": [
+      182,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_B_1",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        180,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        182,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        184,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 495007806,
+    "definition": "master:datalabel",
+    "location": [
+      180,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_B_0",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        180,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 710050407,
+    "definition": "master:datalabel",
+    "location": [
+      182,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_5",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        182,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1437276432,
+    "definition": "master:datalabel",
+    "location": [
+      184,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_B_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        184,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1054151058,
+    "definition": "master:sumjct",
+    "location": [
+      192,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_B_2",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        190,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        192,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        194,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 990606938,
+    "definition": "master:datalabel",
+    "location": [
+      190,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_B_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        190,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1471576045,
+    "definition": "master:datalabel",
+    "location": [
+      192,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_7",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        192,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 292751466,
+    "definition": "master:datalabel",
+    "location": [
+      194,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_B_2",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        194,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1546076395,
+    "definition": "master:sumjct",
+    "location": [
+      202,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_B_3",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        200,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        202,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        204,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 61726236,
+    "definition": "master:datalabel",
+    "location": [
+      200,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_B_2",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        200,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1044355010,
+    "definition": "master:datalabel",
+    "location": [
+      202,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_11",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        202,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1655567874,
+    "definition": "master:datalabel",
+    "location": [
+      204,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_B_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        204,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 652500929,
+    "definition": "master:sumjct",
+    "location": [
+      212,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_B_4",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        210,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        212,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        214,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1787098717,
+    "definition": "master:datalabel",
+    "location": [
+      210,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_B_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        210,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 420239900,
+    "definition": "master:datalabel",
+    "location": [
+      212,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_B_13",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        212,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1571945506,
+    "definition": "master:datalabel",
+    "location": [
+      214,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_B_4",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        214,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 520751533,
+    "definition": "master:gain",
+    "location": [
+      187,
+      130
+    ],
+    "parameters": {
+      "Name": "Command_B",
+      "G": 1.0,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        189,
+        130,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        185,
+        130,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1895436381,
+    "definition": "master:datalabel",
+    "location": [
+      185,
+      130
+    ],
+    "parameters": {
+      "Name": "Partial_B_4",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        185,
+        130,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1638174207,
+    "definition": "master:datalabel",
+    "location": [
+      189,
+      130
+    ],
+    "parameters": {
+      "Name": "CurrentCommand_B",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        189,
+        130,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 641465319,
+    "definition": "master:gain",
+    "location": [
+      234,
+      22
+    ],
+    "parameters": {
+      "Name": "Omega_C_1",
+      "G": 376.99111843077515,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        236,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        232,
+        22,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1508817725,
+    "definition": "master:datalabel",
+    "location": [
+      232,
+      22
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        232,
+        22,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 58459163,
+    "definition": "master:const",
+    "location": [
+      244,
+      27
+    ],
+    "parameters": {
+      "Name": "Phase_C_1",
+      "Value": -1.0471975511965976,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        246,
+        27,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 559565631,
+    "definition": "master:sumjct",
+    "location": [
+      252,
+      22
+    ],
+    "parameters": {
+      "Name": "Angle_C_1",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        250,
+        22,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        252,
+        24,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        254,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1779193046,
+    "definition": "master:trig",
+    "location": [
+      260,
+      22
+    ],
+    "parameters": {
+      "Name": "Sine_C_1",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        262,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        258,
+        22,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1046406696,
+    "definition": "master:gain",
+    "location": [
+      268,
+      22
+    ],
+    "parameters": {
+      "Name": "Amplitude_C_1",
+      "G": 0.1414213562373095,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        270,
+        22,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        266,
+        22,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1428729077,
+    "definition": "master:datalabel",
+    "location": [
+      270,
+      22
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        270,
+        22,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1326636737,
+    "definition": "master:gain",
+    "location": [
+      234,
+      36
+    ],
+    "parameters": {
+      "Name": "Omega_C_3",
+      "G": 1130.9733552923253,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        236,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        232,
+        36,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1349439680,
+    "definition": "master:datalabel",
+    "location": [
+      232,
+      36
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        232,
+        36,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1752024444,
+    "definition": "master:const",
+    "location": [
+      244,
+      41
+    ],
+    "parameters": {
+      "Name": "Phase_C_3",
+      "Value": 0.2617993877991494,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        246,
+        41,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1973360796,
+    "definition": "master:sumjct",
+    "location": [
+      252,
+      36
+    ],
+    "parameters": {
+      "Name": "Angle_C_3",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        250,
+        36,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        252,
+        38,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        254,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1534896549,
+    "definition": "master:trig",
+    "location": [
+      260,
+      36
+    ],
+    "parameters": {
+      "Name": "Sine_C_3",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        262,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        258,
+        36,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1577293475,
+    "definition": "master:gain",
+    "location": [
+      268,
+      36
+    ],
+    "parameters": {
+      "Name": "Amplitude_C_3",
+      "G": 0.007071067811865475,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        270,
+        36,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        266,
+        36,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1109222370,
+    "definition": "master:datalabel",
+    "location": [
+      270,
+      36
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        270,
+        36,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 210381623,
+    "definition": "master:gain",
+    "location": [
+      234,
+      50
+    ],
+    "parameters": {
+      "Name": "Omega_C_5",
+      "G": 1884.9555921538758,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        236,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        232,
+        50,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 738224478,
+    "definition": "master:datalabel",
+    "location": [
+      232,
+      50
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        232,
+        50,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1319089243,
+    "definition": "master:const",
+    "location": [
+      244,
+      55
+    ],
+    "parameters": {
+      "Name": "Phase_C_5",
+      "Value": -2.530727415391778,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        246,
+        55,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1188776269,
+    "definition": "master:sumjct",
+    "location": [
+      252,
+      50
+    ],
+    "parameters": {
+      "Name": "Angle_C_5",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        250,
+        50,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        252,
+        52,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        254,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 415012177,
+    "definition": "master:trig",
+    "location": [
+      260,
+      50
+    ],
+    "parameters": {
+      "Name": "Sine_C_5",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        262,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        258,
+        50,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 541281609,
+    "definition": "master:gain",
+    "location": [
+      268,
+      50
+    ],
+    "parameters": {
+      "Name": "Amplitude_C_5",
+      "G": 0.0282842712474619,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        270,
+        50,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        266,
+        50,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1502974356,
+    "definition": "master:datalabel",
+    "location": [
+      270,
+      50
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_5",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        270,
+        50,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1036166210,
+    "definition": "master:gain",
+    "location": [
+      234,
+      64
+    ],
+    "parameters": {
+      "Name": "Omega_C_7",
+      "G": 2638.937829015426,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        236,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        232,
+        64,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 702554166,
+    "definition": "master:datalabel",
+    "location": [
+      232,
+      64
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        232,
+        64,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 976631960,
+    "definition": "master:const",
+    "location": [
+      244,
+      69
+    ],
+    "parameters": {
+      "Name": "Phase_C_7",
+      "Value": 2.443460952792061,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        246,
+        69,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1936879581,
+    "definition": "master:sumjct",
+    "location": [
+      252,
+      64
+    ],
+    "parameters": {
+      "Name": "Angle_C_7",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        250,
+        64,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        252,
+        66,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        254,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1123452294,
+    "definition": "master:trig",
+    "location": [
+      260,
+      64
+    ],
+    "parameters": {
+      "Name": "Sine_C_7",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        262,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        258,
+        64,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1107529197,
+    "definition": "master:gain",
+    "location": [
+      268,
+      64
+    ],
+    "parameters": {
+      "Name": "Amplitude_C_7",
+      "G": 0.01979898987322333,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        270,
+        64,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        266,
+        64,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 828617476,
+    "definition": "master:datalabel",
+    "location": [
+      270,
+      64
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_7",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        270,
+        64,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1809984991,
+    "definition": "master:gain",
+    "location": [
+      234,
+      78
+    ],
+    "parameters": {
+      "Name": "Omega_C_11",
+      "G": 4146.9023027385265,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        236,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        232,
+        78,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1706220581,
+    "definition": "master:datalabel",
+    "location": [
+      232,
+      78
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        232,
+        78,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 794416982,
+    "definition": "master:const",
+    "location": [
+      244,
+      83
+    ],
+    "parameters": {
+      "Name": "Phase_C_11",
+      "Value": -2.2689280275926285,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        246,
+        83,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 747403983,
+    "definition": "master:sumjct",
+    "location": [
+      252,
+      78
+    ],
+    "parameters": {
+      "Name": "Angle_C_11",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        250,
+        78,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        252,
+        80,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        254,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1449053069,
+    "definition": "master:trig",
+    "location": [
+      260,
+      78
+    ],
+    "parameters": {
+      "Name": "Sine_C_11",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        262,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        258,
+        78,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 413464111,
+    "definition": "master:gain",
+    "location": [
+      268,
+      78
+    ],
+    "parameters": {
+      "Name": "Amplitude_C_11",
+      "G": 0.0,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        270,
+        78,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        266,
+        78,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1300836300,
+    "definition": "master:datalabel",
+    "location": [
+      270,
+      78
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_11",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        270,
+        78,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 2116880937,
+    "definition": "master:gain",
+    "location": [
+      234,
+      92
+    ],
+    "parameters": {
+      "Name": "Omega_C_13",
+      "G": 4900.884539600077,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        236,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        232,
+        92,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 2061035801,
+    "definition": "master:datalabel",
+    "location": [
+      232,
+      92
+    ],
+    "parameters": {
+      "Name": "SimulationTime",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        232,
+        92,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 131589891,
+    "definition": "master:const",
+    "location": [
+      244,
+      97
+    ],
+    "parameters": {
+      "Name": "Phase_C_13",
+      "Value": 2.6179938779914944,
+      "Dim": 1
+    },
+    "ports": {
+      "OUT": [
+        246,
+        97,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1009474631,
+    "definition": "master:sumjct",
+    "location": [
+      252,
+      92
+    ],
+    "parameters": {
+      "Name": "Angle_C_13",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        250,
+        92,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        252,
+        94,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        254,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1230618091,
+    "definition": "master:trig",
+    "location": [
+      260,
+      92
+    ],
+    "parameters": {
+      "Name": "Sine_C_13",
+      "Type": "SIN",
+      "Mode": "RADIANS",
+      "COM": "Trig-Func",
+      "Dim": 1,
+      "const": false
+    },
+    "ports": {
+      "OUT": [
+        262,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        258,
+        92,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1200699534,
+    "definition": "master:gain",
+    "location": [
+      268,
+      92
+    ],
+    "parameters": {
+      "Name": "Amplitude_C_13",
+      "G": 0.009899494936611665,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        270,
+        92,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        266,
+        92,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1224324070,
+    "definition": "master:datalabel",
+    "location": [
+      270,
+      92
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_13",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        270,
+        92,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1930277808,
+    "definition": "master:sumjct",
+    "location": [
+      234,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_C_0",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        232,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        234,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        236,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1728284176,
+    "definition": "master:datalabel",
+    "location": [
+      232,
+      115
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        232,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 722275916,
+    "definition": "master:datalabel",
+    "location": [
+      234,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        234,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1090041232,
+    "definition": "master:datalabel",
+    "location": [
+      236,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_C_0",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        236,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1185478944,
+    "definition": "master:sumjct",
+    "location": [
+      244,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_C_1",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        242,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        244,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        246,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1157942787,
+    "definition": "master:datalabel",
+    "location": [
+      242,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_C_0",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        242,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 170667139,
+    "definition": "master:datalabel",
+    "location": [
+      244,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_5",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        244,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 777554223,
+    "definition": "master:datalabel",
+    "location": [
+      246,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_C_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        246,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1257848960,
+    "definition": "master:sumjct",
+    "location": [
+      254,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_C_2",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        252,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        254,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        256,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 21488441,
+    "definition": "master:datalabel",
+    "location": [
+      252,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_C_1",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        252,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 966673202,
+    "definition": "master:datalabel",
+    "location": [
+      254,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_7",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        254,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 265367112,
+    "definition": "master:datalabel",
+    "location": [
+      256,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_C_2",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        256,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1878851791,
+    "definition": "master:sumjct",
+    "location": [
+      264,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_C_3",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        262,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        264,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        266,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1940742474,
+    "definition": "master:datalabel",
+    "location": [
+      262,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_C_2",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        262,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 666901145,
+    "definition": "master:datalabel",
+    "location": [
+      264,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_11",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        264,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 2098369378,
+    "definition": "master:datalabel",
+    "location": [
+      266,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_C_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        266,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1602732359,
+    "definition": "master:sumjct",
+    "location": [
+      274,
+      115
+    ],
+    "parameters": {
+      "Name": "Total_C_4",
+      "DPath": "REAL",
+      "Dim": 1,
+      "A": "DISABLE",
+      "B": "DISABLE",
+      "C": "DISABLE",
+      "D": "ADD",
+      "E": "DISABLE",
+      "F": "ADD",
+      "G": "DISABLE"
+    },
+    "ports": {
+      "IND": [
+        272,
+        115,
+        "IND",
+        0,
+        1,
+        0,
+        3
+      ],
+      "INF": [
+        274,
+        117,
+        "INF",
+        0,
+        1,
+        0,
+        3
+      ],
+      "OUT": [
+        276,
+        115,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1420818114,
+    "definition": "master:datalabel",
+    "location": [
+      272,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_C_3",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        272,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 200197085,
+    "definition": "master:datalabel",
+    "location": [
+      274,
+      117
+    ],
+    "parameters": {
+      "Name": "Harmonic_C_13",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        274,
+        117,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1274982526,
+    "definition": "master:datalabel",
+    "location": [
+      276,
+      115
+    ],
+    "parameters": {
+      "Name": "Partial_C_4",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        276,
+        115,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 794700741,
+    "definition": "master:gain",
+    "location": [
+      249,
+      130
+    ],
+    "parameters": {
+      "Name": "Command_C",
+      "G": 1.0,
+      "COM": "Gain",
+      "Dim": 1,
+      "DPath": "REAL"
+    },
+    "ports": {
+      "OUT": [
+        251,
+        130,
+        "OUT",
+        0,
+        2,
+        0,
+        3
+      ],
+      "IN": [
+        247,
+        130,
+        "IN",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1339442780,
+    "definition": "master:datalabel",
+    "location": [
+      247,
+      130
+    ],
+    "parameters": {
+      "Name": "Partial_C_4",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        247,
+        130,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1782818185,
+    "definition": "master:datalabel",
+    "location": [
+      251,
+      130
+    ],
+    "parameters": {
+      "Name": "CurrentCommand_C",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        251,
+        130,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 155573067,
+    "definition": "master:pgb",
+    "location": [
+      10,
+      175
+    ],
+    "parameters": {
+      "Name": "Iload_A",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        10,
+        175,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 985685967,
+    "definition": "master:datalabel",
+    "location": [
+      10,
+      175
+    ],
+    "parameters": {
+      "Name": "Iload_A",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        10,
+        175,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1583390348,
+    "definition": "master:pgb",
+    "location": [
+      28,
+      175
+    ],
+    "parameters": {
+      "Name": "Isystem_A",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        28,
+        175,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 268193481,
+    "definition": "master:datalabel",
+    "location": [
+      28,
+      175
+    ],
+    "parameters": {
+      "Name": "Isystem_A",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        28,
+        175,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 2020370051,
+    "definition": "master:pgb",
+    "location": [
+      46,
+      175
+    ],
+    "parameters": {
+      "Name": "Ifilter_A",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        46,
+        175,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 382842599,
+    "definition": "master:datalabel",
+    "location": [
+      46,
+      175
+    ],
+    "parameters": {
+      "Name": "Ifilter_A",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        46,
+        175,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 662128450,
+    "definition": "master:pgb",
+    "location": [
+      64,
+      175
+    ],
+    "parameters": {
+      "Name": "Ilinear_A",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        64,
+        175,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 99343318,
+    "definition": "master:datalabel",
+    "location": [
+      64,
+      175
+    ],
+    "parameters": {
+      "Name": "Ilinear_A",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        64,
+        175,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 231889635,
+    "definition": "master:pgb",
+    "location": [
+      82,
+      175
+    ],
+    "parameters": {
+      "Name": "Vpcc_A",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "V",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        82,
+        175,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1490597037,
+    "definition": "master:datalabel",
+    "location": [
+      82,
+      175
+    ],
+    "parameters": {
+      "Name": "Vpcc_A",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        82,
+        175,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 816118748,
+    "definition": "master:pgb",
+    "location": [
+      10,
+      185
+    ],
+    "parameters": {
+      "Name": "Iload_B",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        10,
+        185,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 891850623,
+    "definition": "master:datalabel",
+    "location": [
+      10,
+      185
+    ],
+    "parameters": {
+      "Name": "Iload_B",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        10,
+        185,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1453416888,
+    "definition": "master:pgb",
+    "location": [
+      28,
+      185
+    ],
+    "parameters": {
+      "Name": "Isystem_B",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        28,
+        185,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 974877348,
+    "definition": "master:datalabel",
+    "location": [
+      28,
+      185
+    ],
+    "parameters": {
+      "Name": "Isystem_B",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        28,
+        185,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 2138926503,
+    "definition": "master:pgb",
+    "location": [
+      46,
+      185
+    ],
+    "parameters": {
+      "Name": "Ifilter_B",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        46,
+        185,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1633455228,
+    "definition": "master:datalabel",
+    "location": [
+      46,
+      185
+    ],
+    "parameters": {
+      "Name": "Ifilter_B",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        46,
+        185,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1517626274,
+    "definition": "master:pgb",
+    "location": [
+      64,
+      185
+    ],
+    "parameters": {
+      "Name": "Ilinear_B",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        64,
+        185,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 541287384,
+    "definition": "master:datalabel",
+    "location": [
+      64,
+      185
+    ],
+    "parameters": {
+      "Name": "Ilinear_B",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        64,
+        185,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 298761088,
+    "definition": "master:pgb",
+    "location": [
+      82,
+      185
+    ],
+    "parameters": {
+      "Name": "Vpcc_B",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "V",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        82,
+        185,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 453440416,
+    "definition": "master:datalabel",
+    "location": [
+      82,
+      185
+    ],
+    "parameters": {
+      "Name": "Vpcc_B",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        82,
+        185,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1025380355,
+    "definition": "master:pgb",
+    "location": [
+      10,
+      195
+    ],
+    "parameters": {
+      "Name": "Iload_C",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        10,
+        195,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 820545311,
+    "definition": "master:datalabel",
+    "location": [
+      10,
+      195
+    ],
+    "parameters": {
+      "Name": "Iload_C",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        10,
+        195,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1404880684,
+    "definition": "master:pgb",
+    "location": [
+      28,
+      195
+    ],
+    "parameters": {
+      "Name": "Isystem_C",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        28,
+        195,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1112636211,
+    "definition": "master:datalabel",
+    "location": [
+      28,
+      195
+    ],
+    "parameters": {
+      "Name": "Isystem_C",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        28,
+        195,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 572331952,
+    "definition": "master:pgb",
+    "location": [
+      46,
+      195
+    ],
+    "parameters": {
+      "Name": "Ifilter_C",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        46,
+        195,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1960469973,
+    "definition": "master:datalabel",
+    "location": [
+      46,
+      195
+    ],
+    "parameters": {
+      "Name": "Ifilter_C",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        46,
+        195,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1191513114,
+    "definition": "master:pgb",
+    "location": [
+      64,
+      195
+    ],
+    "parameters": {
+      "Name": "Ilinear_C",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "A",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        64,
+        195,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 265392315,
+    "definition": "master:datalabel",
+    "location": [
+      64,
+      195
+    ],
+    "parameters": {
+      "Name": "Ilinear_C",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        64,
+        195,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 1478071943,
+    "definition": "master:pgb",
+    "location": [
+      82,
+      195
+    ],
+    "parameters": {
+      "Name": "Vpcc_C",
+      "Group": "",
+      "UseSignalName": "NO",
+      "enab": "YES",
+      "Display": "YES",
+      "Scale": 1000.0,
+      "Units": "V",
+      "mrun": "LAST_RUN_ONLY",
+      "Pol": "NO",
+      "Max": 2.0,
+      "Min": -2.0
+    },
+    "ports": {
+      "Signl": [
+        82,
+        195,
+        "Signl",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "iid": 120609378,
+    "definition": "master:datalabel",
+    "location": [
+      82,
+      195
+    ],
+    "parameters": {
+      "Name": "Vpcc_C",
+      "animate": "NONE",
+      "display": "CURRENT",
+      "datatype": "REAL",
+      "index": 1,
+      "Unit": "",
+      "ivalue1": 0,
+      "rvalue1": 0.0,
+      "rvalue2": 0.0,
+      "showani": 0
+    },
+    "ports": {
+      "A": [
+        82,
+        195,
+        "A",
+        0,
+        1,
+        0,
+        3
+      ]
+    }
+  }
+]

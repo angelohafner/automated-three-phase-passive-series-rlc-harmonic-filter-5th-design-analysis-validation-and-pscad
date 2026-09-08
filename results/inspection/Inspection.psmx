@@ -1,0 +1,6 @@
+<Meta name="Inspection">
+  <messagelist />
+  <ViewContext>
+    <Window defn="Inspection:Main" call="0" />
+  </ViewContext>
+</Meta>

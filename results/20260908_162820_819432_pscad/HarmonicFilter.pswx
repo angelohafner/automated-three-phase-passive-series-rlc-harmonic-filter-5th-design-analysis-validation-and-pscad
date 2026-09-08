@@ -1,0 +1,19 @@
+<workspace name="HarmonicFilter" version="5.1.0" crc="44314202">
+  <projects>
+    <project type="project" name="without_filter" filepath=".\projects\without_filter.pscx" open="true" />
+    <project type="project" name="tuned_5th" filepath=".\projects\tuned_5th.pscx" open="true" />
+    <project type="project" name="detuned_285hz" filepath=".\projects\detuned_285hz.pscx" open="true" />
+    <project type="project" name="stiff_grid" filepath=".\projects\stiff_grid.pscx" open="true" />
+    <project type="project" name="weak_grid" filepath=".\projects\weak_grid.pscx" open="true" />
+    <project type="project" name="low_quality" filepath=".\projects\low_quality.pscx" open="true" />
+  </projects>
+  <simulations />
+  <pmr />
+  <messagegrid expanded="">
+    <column name="Icon" />
+    <column name="Id" />
+    <column name="Component" />
+    <column name="Namespace" />
+    <column name="Description" />
+  </messagegrid>
+</workspace>

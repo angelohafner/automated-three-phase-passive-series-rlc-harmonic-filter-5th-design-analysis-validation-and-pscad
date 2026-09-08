@@ -1,0 +1,23 @@
+<Output device="EMTDC" version="2010" date="2026/09/08" time="16:48:45.000000">
+  <Domain name="Time" unit="s" mult="0.0" skew="0.0">
+    <Sample rate="200000.0" end="200000" />
+  </Domain>
+  <List classid="Analog">
+    <Analog name="Main(0):Iload_A" index="1" gindex="100663297" id="155573067:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Isystem_A" index="2" gindex="100663298" id="1583390348:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Ifilter_A" index="3" gindex="100663299" id="2020370051:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Ilinear_A" index="4" gindex="100663300" id="662128450:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Vpcc_A" index="5" gindex="100663301" id="231889635:0" label="" dim="1" unit="V" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Iload_B" index="6" gindex="100663302" id="816118748:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Isystem_B" index="7" gindex="100663303" id="1453416888:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Ifilter_B" index="8" gindex="100663304" id="2138926503:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Ilinear_B" index="9" gindex="100663305" id="1517626274:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Vpcc_B" index="10" gindex="100663306" id="298761088:0" label="" dim="1" unit="V" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Iload_C" index="11" gindex="100663307" id="1025380355:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Isystem_C" index="12" gindex="100663308" id="1404880684:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Ifilter_C" index="13" gindex="100663309" id="572331952:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Ilinear_C" index="14" gindex="100663310" id="1191513114:0" label="" dim="1" unit="A" min="-2.0" max="2.0" />
+    <Analog name="Main(0):Vpcc_C" index="15" gindex="100663311" id="1478071943:0" label="" dim="1" unit="V" min="-2.0" max="2.0" />
+  </List>
+  <List classid="Digital" />
+</Output>

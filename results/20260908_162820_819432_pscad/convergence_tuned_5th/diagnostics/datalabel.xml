@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Definition classid="UserCmpDefn" name="datalabel" url="" view="false" instances="0" date="0" crc="4573547" id="421086439" group="Meters,Breakers Faults,Machines,Miscellaneous"><paramlist><param name="Description" value="Data signal label" /><param name="seq" value="animate!=0" /></paramlist><form name="Data signal label" w="320" h="420" splitter="40" commentlines="4"><category name="Configuration" visible="true"><cond /><parameter type="Text" name="Name" desc="Data Signal Name" group="" helpmode="Overwrite" allowemptystr="false"><value>Sig</value><cond>true</cond><help>Enter a name that begin with a letter, not more than 31 characters and contain only letters,digits and underscore</help><regex>^([a-zA-Z]\w{0,30})|(\$\(\w{1,30}\))$</regex><error_msg>name should begin with a letter, not more than 31 characters and contain only letters,digits and underscore</error_msg></parameter><parameter name="animate" desc="Animate" type="Choice" group="" helpmode="Append" animate="false"><value>0</value><cond>true</cond><vis>true</vis><help>The type of animation that this data label should show.</help><choice>0 = None</choice><choice>1 = Single Signal Value</choice><choice>2 = Maximum Signal Value</choice><choice>3 = Minimum Signal Value</choice></parameter><parameter name="display" desc="Display" type="Choice" group="" helpmode="Append" animate="false"><value>0</value><cond>animate!=0</cond><vis>true</vis><help>The value that should be displayed in the animation.</help><choice>0 = Current Value</choice><choice>1 = Maximum Value of the Run</choice><choice>2 = Minimum Value of the Run</choice></parameter><parameter name="datatype" desc="Type" type="Choice" group="" helpmode="Append" animate="false"><value>2</value><cond>animate!=0</cond><vis>true</vis><help>The data type of the signal to to animate</help><choice>0 = Logical</choice><choice>1 = Integer</choice><choice>2 = Real</choice><choice>3 = Complex</choice></parameter><parameter name="index" desc="Animate Index" type="Integer" group="" helpmode="Append" content_type="Literal" intent="Input" dim="1" animate="false" unit="" min="1" max="65536"><value>1</value><cond>animate==1</cond><vis>animate==1</vis><help>The index of the signal to animate</help></parameter><parameter type="Text" name="Unit" desc="Display Unit" group="" helpmode="Overwrite" allowemptystr="true"><value /><cond>animate!=0&amp;&amp;(datatype==1||datatype==2)</cond><vis>animate!=0&amp;&amp;(datatype==1||datatype==2)</vis><help>Enter an optional unit to display with the animated value.</help><regex /><error_msg /></parameter><parameter name="ivalue1" desc="Integer Value 1" type="Integer" group="" helpmode="Append" content_type="Literal" intent="Input" dim="1" animate="true" unit="" min="-2147483648" max="2147483647"><value>0</value><cond>true</cond><vis>false</vis><animate>animate!=0&amp;&amp;(datatype==0||datatype==1)</animate><help>Hidden property to facilitate animations.</help></parameter><parameter name="rvalue1" desc="Real Value 1" type="Real" group="" helpmode="Append" content_type="Literal" intent="Input" dim="1" animate="true" unit="" min="-1E+308" max="1E+308"><value>0</value><cond>true</cond><vis>false</vis><animate>animate!=0&amp;&amp;(datatype==2||datatype==3)</animate><help>Hidden property to facilitate animations.</help></parameter><parameter name="rvalue2" desc="Real Value 2" type="Real" group="" helpmode="Append" content_type="Literal" intent="Input" dim="1" animate="true" unit="" min="-1E+308" max="1E+308"><value>0</value><cond>true</cond><vis>false</vis><animate>animate!=0&amp;&amp;datatype==3</animate><help>Hidden property to facilitate animations.</help></parameter><parameter name="showani" desc="Show Animation" type="Integer" group="" helpmode="Append" content_type="Literal" intent="Input" dim="1" animate="true" unit="" min="-2147483648" max="2147483647"><value>0</value><cond>true</cond><vis>false</vis><help>Hidden property to activate animations.</help><animate>animate!=0</animate></parameter></category></form><svg viewBox="-200 -200 200 200" size="2"><paramlist><param name="show_grid" value="0" /><param name="size" value="0" /><param name="orient" value="1" /><param name="show_border" value="0" /></paramlist><port model="Transfer" name="A" x="0" y="0" dim="0" mode="Input" type="Real" internal="false">true</port><cond>true</cond><ellipse cx="0" cy="0" rx="3" ry="3" stroke="Navy" stroke-dasharray="none" stroke-width="0.2" fill-style="Hollow" fill-fg="Black" fill-bg="" /><text x="0" y="12" stroke="Blue" fill="Blue" font-size="Small" text-anchor="Middle">%Name</text></svg><script><segment name="FlyBy" id="124696611" classid="CoreSegment">Data signal label</segment><segment classid="CoreSegment" id="2113071635" name="Fortran">#IF animate!=0
+  #IF display==1||display==2
+    #IF datatype==1
+      #STORAGE INTEGER:1
+    #ELSEIF datatype==2
+      #STORAGE REAL:1
+    #ENDIF
+  #ENDIF
+  #IF datatype==0
+    #LOCAL LOGICAL LVD1_1
+    #LOCAL INTEGER IVD1_1
+  #ELSEIF datatype==1
+    #LOCAL INTEGER IVD1_1
+  #ELSEIF datatype==2
+    #LOCAL REAL RVD1_1
+  #ELSEIF datatype==3
+    #LOCAL COMPLEX CVD1_1
+  #ENDIF
+  #IF animate==1&amp;&amp;$#DIM(A)&gt;1
+    #IF datatype==0
+      LVD1_1=$A($index)
+    #ELSEIF datatype==1
+      IVD1_1=$A($index)
+    #ELSEIF datatype==2
+      RVD1_1=$A($index)
+    #ELSEIF datatype==3
+      CVD1_1=$A($index)
+    #ENDIF
+  #ELSEIF animate==2&amp;&amp;$#DIM(A)&gt;1
+    #IF datatype==1
+          IVD1_1=MAXVAL($A)
+    #ELSEIF datatype==2
+          RVD1_1=MAXVAL($A)
+    #ENDIF          
+  #ELSEIF animate==3&amp;&amp;$#DIM(A)&gt;1
+    #IF datatype==1
+          IVD1_1=MINVAL($A)
+    #ELSEIF datatype==2
+          RVD1_1=MINVAL($A)
+    #ENDIF    
+  #ELSE
+    #IF datatype==0
+      LVD1_1=$A
+    #ELSEIF datatype==1
+      IVD1_1=$A
+    #ELSEIF datatype==2
+      RVD1_1=$A
+    #ELSEIF datatype==3
+      CVD1_1=$A
+    #ENDIF
+  #ENDIF
+  #IF display==1||display==2
+      IF (.NOT.TIMEZERO) THEN
+    #IF datatype==1
+          IF (STORI(NSTORI)~
+      #IF display==2 {~.LT.~}{~.GT.~}       
+~IVD1_1)IVD1_1=STORI(NSTORI)
+    #ELSEIF datatype==2
+          IF (STORF(NSTORF)~
+      #IF display==2 {~.LT.~}{~.GT.~}  
+~RVD1_1)RVD1_1=STORF(NSTORF)
+    #ENDIF
+      ENDIF
+    #IF datatype==1
+      STORI(NSTORI)=IVD1_1
+      NSTORI=NSTORI+1
+    #ELSEIF datatype==2
+      STORF(NSTORF)=RVD1_1
+      NSTORF=NSTORF+1
+    #ENDIF
+  #ENDIF
+      IF (UPDATE_AG) THEN
+  #IF datatype==0
+          IF (LVD1_1) THEN
+              IVD1_1 = 1
+          ELSE
+              IVD1_1 = 0
+          ENDIF
+  #ENDIF     
+          CALL PSCAD_AGI2(ICALL_NO,$#Component,1,"showani")
+          CALL ~
+  #IF datatype==2||datatype==3 {~PSCAD_AGR2~} {~PSCAD_AGI2~}
+~(ICALL_NO,$#Component,~
+  #CASE datatype {~IVD1_1~}{~IVD1_1~}{~RVD1_1~}{~REAL(CVD1_1)~}
+  #IF datatype==2||datatype==3 {~,"rvalue1")} {~,"ivalue1")}
+  #IF datatype==3
+          CALL PSCAD_AGR2(ICALL_NO,$#Component,IMAG(CVD1_1),"rvalue2")
+  #ENDIF
+      ENDIF
+#ENDIF</segment><segment classid="CoreSegment" id="1458504700" name="Checks">ERROR Index ($index) of animation exceeds dimension of signal ($#DIM(A)): animate!=1||$#DIM(A)&lt;=1||index&lt;=$#DIM(A)
+ERROR Cannot calculate the maximum value for a Logical signal, Only a signal current value can be displayed for Logical Signals:(animate!=2&amp;&amp;display!=1)||datatype!=0
+ERROR Cannot calculate the minimum value for a Logical signal, Only a signal current value can be displayed for Logical Signals:(animate!=3&amp;&amp;display!=2)||datatype!=0
+ERROR Cannot calculate the maximum value for a Complex signal, Only a signal current value can be displayed for Complex Signals:(animate!=2&amp;&amp;display!=1)||datatype!=3
+ERROR Cannot calculate the minimum value for a Complex signal, Only a signal current value can be displayed for Complex Signals:(animate!=3&amp;&amp;display!=2)||datatype!=3</segment></script><graphics size="4"><paramlist><param name="show_border" value="0" /><param name="show_grid" value="0" /><param name="size" value="0" /><param name="orient" value="1" /><param name="lock_style" value="3" /><param name="lock_cx" value="0" /><param name="lock_cy" value="0" /></paramlist><Gfx classid="Graphics.Rectangle" id="1973444598" x="-50" y="-24" w="100" h="24"><paramlist><param name="color" value="Transparent" /><param name="dasharray" value="0" /><param name="thickness" value="0" /><param name="port" value="" /><param name="fill_style" value="0" /><param name="fill_fg" value="Black" /><param name="fill_bg" value="Black" /><param name="cond" value="animate!=0" /><param name="lock" value="false" /></paramlist></Gfx><Port id="1613001986" classid="Port" x="0" y="0"><paramlist><param name="name" value="A" /><param name="internal" value="false" /><param name="cond" value="animate==0||datatype==2" /><param name="mode" value="1" /><param name="datatype" value="3" /><param name="electype" value="0" /><param name="dim" value="0" /></paramlist></Port><Port id="823932571" classid="Port" x="0" y="0"><paramlist><param name="name" value="A" /><param name="internal" value="false" /><param name="cond" value="animate!=0&amp;&amp;datatype==3" /><param name="mode" value="1" /><param name="datatype" value="4" /><param name="electype" value="0" /><param name="dim" value="0" /></paramlist></Port><Port id="1783425172" classid="Port" x="0" y="0"><paramlist><param name="name" value="A" /><param name="internal" value="false" /><param name="cond" value="animate!=0&amp;&amp;datatype==1" /><param name="mode" value="1" /><param name="datatype" value="2" /><param name="electype" value="0" /><param name="dim" value="0" /></paramlist></Port><Port id="235380113" classid="Port" x="0" y="0"><paramlist><param name="name" value="A" /><param name="internal" value="false" /><param name="cond" value="animate!=0&amp;&amp;datatype==0" /><param name="mode" value="1" /><param name="datatype" value="1" /><param name="electype" value="0" /><param name="dim" value="0" /></paramlist></Port><Gfx classid="Graphics.Ellipse" id="942499658" x="-3" y="-3" w="6" h="6"><paramlist><param name="color" value="#ff0000ff" /><param name="dasharray" value="0" /><param name="thickness" value="0" /><param name="port" value="" /><param name="fill_style" value="0" /><param name="fill_fg" value="Black" /><param name="fill_bg" value="White" /><param name="cond" value="true" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="1506881468" x="0" y="12"><paramlist><param name="color" value="#ff0000ff" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="true" /><param name="text" value="%Name" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="821548136" x="0" y="-12"><paramlist><param name="color" value="#ff17806d" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="animate!=0&amp;&amp;is_empty(unit)&amp;&amp;showani==1&amp;&amp;datatype==2" /><param name="text" value="%rvalue1" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="821548137" x="0" y="-12"><paramlist><param name="color" value="#ff17806d" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="animate!=0&amp;&amp;!is_empty(unit)&amp;&amp;showani==1&amp;&amp;datatype==2" /><param name="text" value="%rvalue1 [%unit]" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="195108956" x="0" y="-12"><paramlist><param name="color" value="#ff1f75fe" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="animate!=0&amp;&amp;is_empty(unit)&amp;&amp;showani==1&amp;&amp;datatype==1" /><param name="text" value="%ivalue1" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="195108957" x="0" y="-12"><paramlist><param name="color" value="#ff1f75fe" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="animate!=0&amp;&amp;!is_empty(unit)&amp;&amp;showani==1&amp;&amp;datatype==1" /><param name="text" value="%ivalue1 [%unit]" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="397923314" x="0" y="-12"><paramlist><param name="color" value="#ffff7538" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="animate!=0&amp;&amp;showani==1&amp;&amp;datatype==3" /><param name="text" value="%rvalue1 , %rvalue2" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="907526961" x="0" y="-12"><paramlist><param name="color" value="#ffc364c5" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="animate!=0&amp;&amp;showani==1&amp;&amp;datatype==0&amp;&amp;ivalue1==0" /><param name="text" value="False" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="1235938841" x="0" y="-12"><paramlist><param name="color" value="#ffc364c5" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="animate!=0&amp;&amp;showani==1&amp;&amp;datatype==0&amp;&amp;ivalue1!=0" /><param name="text" value="True" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="false" /></paramlist></Gfx></graphics></Definition>

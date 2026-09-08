@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Definition classid="UserCmpDefn" name="const" url="" view="false" instances="0" date="0" crc="131214011" id="455707192" group="Miscellaneous,External C"><paramlist><param name="Description" value="Real Constant" /></paramlist><form name="Real Constant" w="280" h="420" splitter="70" commentlines="4"><category name="Configuration" visible="true"><cond /><parameter type="Text" name="Name" desc="Label for the Constant" group="" helpmode="Append" allowemptystr="true"><value /><cond type="Enable" /><help>Optional text for identification purpose</help><regex /><error_msg /></parameter><parameter type="Real" name="Value" desc="Real Constant Value" content_type="Literal" min="-1E+308" max="1E+308" unit="" group="" helpmode="Append" intent="Input" dim="1" animate="false"><value>1.0</value><cond type="Enable" /><help /></parameter><parameter desc="Output Dimension" name="Dim" group="" unit="" min="1" max="2147483647" content_type="Literal" type="Integer" helpmode="Append" intent="Input" dim="1" animate="false"><value>1</value><cond type="Enable" /><help>Dimension of the output</help></parameter></category></form><script><segment name="Dsdyn" id="2101030828" classid="CoreSegment">#BEGIN
+      $OUT = $Value
+#ENDBEGIN
+      $OUT = $Value</segment><segment name="Dsout" id="991648039" classid="CoreSegment">
+#BEGIN
+      $OUT = $Value
+#ENDBEGIN
+      $OUT = $Value
+</segment><segment name="FlyBy" id="740982944" classid="CoreSegment">Real constant
+:OUT
+output</segment><segment classid="CoreSegment" id="117287280" name="C">#INCLUDE $(HomeDir)\CCoder\stdinc.pds
+#DSDYNBEGIN
+#IF Dim == 1 
+$OUT = $CONST($Value);
+#ELSE
+#LOCAL INTEGER i
+for (i = 0; i &lt; Dim; i++) {
+	$OUT[i] = $CONST($Value);
+}
+#ENDIF
+#ENDDSDYNBEGIN
+</segment></script><graphics size="4"><paramlist><param name="show_border" value="0" /><param name="show_grid" value="0" /><param name="size" value="0" /><param name="orient" value="1" /><param name="lock_style" value="3" /><param name="lock_cx" value="0" /><param name="lock_cy" value="0" /></paramlist><Gfx classid="Graphics.PathEx" id="1207917732" x="-1" y="0" hs="1" ws="1" locked="true" w="63" h="53"><paramlist><param name="color" value="#ff17806d" /><param name="dasharray" value="0" /><param name="thickness" value="0" /><param name="port" value="" /><param name="fill_style" value="1" /><param name="fill_fg" value="#ffffffff" /><param name="fill_bg" value="Black" /><param name="orient" value="0" /><param name="cond" value="true" /><param name="lock" value="false" /></paramlist><sections><start x="-21" y="-7" /><bezier x1="-32" y1="-7" x2="-32" y2="7" x3="-21" y3="7" /><line x="23" y="7" /><line x="31" y="0" /><line x="23" y="-7" /><end /></sections></Gfx><Port id="1111122785" classid="Port" x="36" y="0"><paramlist><param name="name" value="OUT:Dim" /><param name="internal" value="false" /><param name="const" value="true" /><param name="cond" value="true" /><param name="mode" value="2" /><param name="datatype" value="3" /><param name="electype" value="0" /><param name="dim" value="0" /></paramlist></Port><Gfx classid="Graphics.Line" id="666016266" x="30" y="0"><vertex x="0" y="0" /><vertex x="6" y="0" /><paramlist><param name="color" value="Green" /><param name="dasharray" value="0" /><param name="thickness" value="0" /><param name="port" value="" /><param name="cond" value="true" /><param name="lock" value="false" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="813231802" x="1" y="4"><paramlist><param name="color" value="Black" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="true" /><param name="text" value="$Value" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="true" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="43540042" x="1" y="19"><paramlist><param name="color" value="Black" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="true" /><param name="text" value="%Name" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="true" /></paramlist></Gfx><Gfx classid="Graphics.Text" id="317113918" x="0" y="-12"><paramlist><param name="color" value="Black" /><param name="font_size" value="0" /><param name="anchor" value="1" /><param name="cond" value="Dim&gt;1" /><param name="text" value="($Dim)" /><param name="full_font" value="Tahoma, 12world" /><param name="angle" value="0" /><param name="lock" value="false" /></paramlist></Gfx></graphics></Definition>

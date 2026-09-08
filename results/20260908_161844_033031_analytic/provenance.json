@@ -1,0 +1,18 @@
+{
+  "origin": "ANALYTICAL_REFERENCE",
+  "created": "2026-09-08T16:18:44.033031",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "matplotlib": "3.11.1"
+  },
+  "selected_cases": [
+    "without_filter",
+    "tuned_5th",
+    "detuned_285hz",
+    "stiff_grid",
+    "weak_grid",
+    "low_quality"
+  ],
+  "template": null
+}

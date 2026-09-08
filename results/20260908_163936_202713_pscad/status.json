@@ -1,0 +1,8 @@
+{
+  "origin": "PSCAD_EMTDC",
+  "completed": true,
+  "validation_passed": true,
+  "cases": [
+    "linear_triplen_check"
+  ]
+}

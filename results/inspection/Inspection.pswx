@@ -1,0 +1,14 @@
+<workspace name="Inspection" version="5.1.0" crc="91645250">
+  <projects>
+    <project type="project" name="Inspection" filepath=".\Inspection.pscx" open="true" />
+  </projects>
+  <simulations />
+  <pmr />
+  <messagegrid expanded="">
+    <column name="Icon" />
+    <column name="Id" />
+    <column name="Component" />
+    <column name="Namespace" />
+    <column name="Description" />
+  </messagegrid>
+</workspace>

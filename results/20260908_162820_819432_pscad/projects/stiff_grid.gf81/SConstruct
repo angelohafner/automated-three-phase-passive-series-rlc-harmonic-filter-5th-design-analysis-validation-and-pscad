@@ -1,0 +1,62 @@
+import os
+
+PSCAD_C_INCLUDES=[r'$EMTDCDIR\\inc', '$EMTDCBIN']
+PSCAD_F_INCLUDES=['.', r'$EMTDCDIR\\inc', '$EMTDCDIR', '$EMTDCBIN']
+
+env=DefaultEnvironment(
+    ENV=os.environ,
+    PRINT_CMD_LINE_FUNC=lambda cmd, tgt, src, env: print(f'>>> {cmd}'),
+    tools=['gfortran', 'gcc', 'g++', 'link', 'ar'],
+    CC=r'"C:\Program Files\GFortran\8.1\x64\bin\gcc.exe"',
+    FORTRAN=r'"C:\Program Files\GFortran\8.1\x64\bin\gfortran.exe"',
+    LINK=r'"C:\Program Files\GFortran\8.1\x64\bin\gcc.exe"',
+    CCFLAGS=['$PSCAD_C_DEFAULTS', '$PSCAD_C_PREPROC', '$PSCAD_C_WARNINGS', '$PSCAD_C_OPT', '$PSCAD_C_ADD'],
+    CPPPATH=PSCAD_C_INCLUDES,
+    FORTRANFLAGS=['$PSCAD_F_DEFAULTS', '$PSCAD_F_CHECKS', '$PSCAD_F_WARNINGS', '$PSCAD_F_PREPROC', '$PSCAD_F_OPT', '$PSCAD_F_ADD'],
+    FORTRANPATH=PSCAD_F_INCLUDES,
+    LINKFLAGS='$PSCAD_LINK_DEFAULTS $PSCAD_LINK_OPT',
+    LIBS=['gfortran', 'stdc++', 'quadmath', 'wsock32'],
+    PLATFORM='x64',
+    LIBPREFIX='',
+    LIBSUFFIX='.lib',
+    TARGET_ARCH='x86_64',
+    MSVC_VERSION='',
+    FORTRANFILESUFFIXES=['.f', '.for', '.ftn', '.f90'],
+    PSCAD_C_DEFAULTS='-Wall',
+    PSCAD_C_PREPROC=' $PSCAD_C_EXTRA_PREPROC',
+    PSCAD_C_ADD=r' $PSCAD_C_EXTRA_ADD',
+    PSCAD_C_WARNINGS=' ',
+    PSCAD_C_OPT='-O2',
+    PSCAD_C_DEBUG='-g',
+    PSCAD_C_EXTRA_PREPROC='',
+    PSCAD_C_EXTRA_ADD='',
+    PSCAD_F_DEFAULTS='-ffree-form -fdefault-real-8 -fdefault-double-8 -xf95-cpp-input',
+    PSCAD_F_WARNINGS='-Wconversion ',
+    PSCAD_F_CHECKS=' ',
+    PSCAD_F_DEBUG='-g',
+    PSCAD_F_OPT='-O2',
+    PSCAD_F_PREPROC=r' $PSCAD_F_EXTRA_PREPROC',
+    PSCAD_F_ADD=r' $PSCAD_F_EXTRA_ADD',
+    PSCAD_F_EXTRA_PREPROC='',
+    PSCAD_F_EXTRA_ADD='',
+    PSCAD_LINK_DEFAULTS='-fopenmp',
+    PSCAD_LINK_DEBUG='-g',
+    PSCAD_LINK_OPT='-O2',
+    EMTDCDIR=r'C:\Program Files (x86)\PSCAD\5.1.0\emtdc\gf81',
+    EMTDCBIN=r'$EMTDCDIR\windows',
+    MATLAB_LIBPATH=''
+    )
+
+env.SetOption('num_jobs', os.cpu_count())
+
+objects = [env.File(r'$EMTDCBIN\main.obj')]
+objects += env.Object(target=r'DS_0.o', source=r'DS.f')
+objects += env.Object(target=r'Main_1.o', source=r'Main.f')
+objects += [env.File(r'$EMTDCBIN\emtdc.lib')]
+
+objects = [o for o in objects if o.suffix != '.mod']
+
+
+env.Program('stiff_grid', objects)
+env.Install(target='.', source=r'$EMTDCBIN\_Solver.dll')
+

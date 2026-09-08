@@ -1,0 +1,13 @@
+{
+  "origin": "ANALYTICAL_REFERENCE",
+  "completed": true,
+  "validation_passed": true,
+  "cases": [
+    "without_filter",
+    "tuned_5th",
+    "detuned_285hz",
+    "stiff_grid",
+    "weak_grid",
+    "low_quality"
+  ]
+}

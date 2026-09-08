@@ -1,0 +1,65 @@
+{
+  "pscad_executable": "C:\\Program Files (x86)\\PSCAD\\5.1.0\\bin\\win64\\pscad.exe",
+  "output_root": "results",
+  "compiler": "GFortran 8.1 (64-bit)",
+  "frequency_hz": 60.0,
+  "voltage_ll_rms_v": 480.0,
+  "grid_resistance_ohm": 0.02,
+  "grid_inductance_h": 0.0002,
+  "linear_load_kw": 0.0,
+  "filter_reactive_var": 30000.0,
+  "nominal_tuning_hz": 300.0,
+  "nominal_quality_factor": 50.0,
+  "filter_resistance_ohm": null,
+  "duration_s": 1.0,
+  "time_step_us": 5.0,
+  "sample_step_us": 5.0,
+  "steady_start_s": 0.6,
+  "analysis_cycles": 12,
+  "max_harmonic": 25,
+  "kcl_tolerance_pct": 0.1,
+  "steady_tolerance_pct": 0.5,
+  "theory_tolerance_pct": 1.0,
+  "harmonics": [
+    {
+      "order": 1,
+      "rms_a": 100.0,
+      "angle_deg": 180.0,
+      "enabled": true
+    },
+    {
+      "order": 5,
+      "rms_a": 20.0,
+      "angle_deg": 0.0,
+      "enabled": true
+    },
+    {
+      "order": 7,
+      "rms_a": 14.0,
+      "angle_deg": 20.0,
+      "enabled": true
+    },
+    {
+      "order": 11,
+      "rms_a": 9.0,
+      "angle_deg": -10.0,
+      "enabled": true
+    },
+    {
+      "order": 13,
+      "rms_a": 7.0,
+      "angle_deg": 30.0,
+      "enabled": true
+    }
+  ],
+  "cases": [
+    {
+      "name": "tuned_5th",
+      "enabled": true,
+      "filter_enabled": true,
+      "tuning_hz": 300.0,
+      "quality_factor": 50.0,
+      "grid_scale": 1.0
+    }
+  ]
+}
