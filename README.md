@@ -163,9 +163,9 @@ A carga linear opcional e resistiva, configurada por `linear_load_kw` (potencia
 trifasica na tensao nominal), com Rlinear=VLL^2/Plinear por fase. Quando ativada,
 a KCL correta passa a ser:
 
-\[
+$$
 \underline I_{load,h}=\underline I_{system,h}+\underline I_{filter,h}+\underline I_{linear,h}.
-\]
+$$
 
 Ela absorve tambem correntes harmonicas se Vpcc estiver distorcida. Nao se pode
 omitir esse quarto termo. Com a configuracao inicial, Ilinear=0 e vale exatamente
